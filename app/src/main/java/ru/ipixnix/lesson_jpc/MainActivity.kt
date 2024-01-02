@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -31,7 +32,12 @@ fun ScreenMain() {
 
     // Строка
     Row (
-        modifier = Modifier.background(Color.Yellow)
+        // Модификаторы
+        modifier = Modifier
+                // Цвет фона
+                .background(Color.Yellow)
+                // Растянуть Строку на весь экран
+                .fillMaxSize()
     ){
         // Элемент Text 1
         Text(
