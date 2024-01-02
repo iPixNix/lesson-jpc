@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ScreenMain() {
 
-    // Колонка
+    // Строка
     Row {
         // Элемент Text 1
         Text(
