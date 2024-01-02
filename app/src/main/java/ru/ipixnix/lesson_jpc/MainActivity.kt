@@ -23,8 +23,19 @@ class MainActivity : ComponentActivity() {
 // Функция Jetpack Compose Главный экран
 @Composable
 fun ScreenMain() {
-    // Элемент Text
+
+    // Элемент Text 1
     Text(
-        text = "Hello" // Текст содержит слово "Hello"
+        text = "Text 1" // Текст содержит слово "Text 1"
+    )
+
+    // Элемент Text 2
+    Text(
+        text = "Text 2" // Текст содержит слово "Text 2"
+    )
+
+    // Элемент Text 3
+    Text(
+        text = "Text 3" // Текст содержит слово "Text 3"
     )
 }
