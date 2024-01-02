@@ -3,10 +3,13 @@ package ru.ipixnix.lesson_jpc
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 
 class MainActivity : ComponentActivity() {
@@ -27,7 +30,9 @@ class MainActivity : ComponentActivity() {
 fun ScreenMain() {
 
     // Строка
-    Row {
+    Row (
+        modifier = Modifier.background(Color.Yellow)
+    ){
         // Элемент Text 1
         Text(
             text = "Text 1" // Текст содержит слово "Text 1"
