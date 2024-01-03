@@ -5,29 +5,30 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 
 class MainActivity : ComponentActivity() {
@@ -36,43 +37,91 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             /** Столбец */
-            Column() {
+            Column(
+                modifier = Modifier
+                        /* Добавить вертикальную прокрутку для списка */
+                        .verticalScroll(rememberScrollState())
+            ) {
                 /** Список элементов списка */
                 ListItem(
-                    name = "Имя 1", // Имя из переменной функции
-                    prof = "Профессия 1" // Профессия из переменной функции
+                    name = "Имя ", // Имя из переменной функции
+                    prof = "Профессия " // Профессия из переменной функции
                 )
                 ListItem(
-                    name = "Имя 2",
-                    prof = "Профессия 2"
+                    name = "Имя ",
+                    prof = "Профессия "
                 )
                 ListItem(
-                    name = "Имя 3",
-                    prof = "Профессия 3"
+                    name = "Имя ",
+                    prof = "Профессия "
                 )
                 ListItem(
-                    name = "Имя 4",
-                    prof = "Профессия 4"
+                    name = "Имя ",
+                    prof = "Профессия "
                 )
                 ListItem(
-                    name = "Имя 5",
-                    prof = "Профессия 5"
+                    name = "Имя ",
+                    prof = "Профессия "
                 )
                 ListItem(
-                    name = "Имя 6",
-                    prof = "Профессия 6"
+                    name = "Имя ",
+                    prof = "Профессия "
                 )
                 ListItem(
-                    name = "Имя 7",
-                    prof = "Профессия 7"
+                    name = "Имя ",
+                    prof = "Профессия "
                 )
                 ListItem(
-                    name = "Имя 8",
-                    prof = "Профессия 8"
+                    name = "Имя ",
+                    prof = "Профессия "
                 )
                 ListItem(
-                    name = "Имя 9",
-                    prof = "Профессия 9"
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
+                )
+                ListItem(
+                    name = "Имя ",
+                    prof = "Профессия "
                 )
             }
         }
@@ -81,12 +130,59 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ListItem(name: String, prof: String) {
+    /** Состояние счётчика */
+    val counter = remember {
+        mutableIntStateOf(0)
+    }
+    /** Состояние Цвета 1 */
+    val color1 = remember {
+        mutableStateOf(Color.Green)
+    }
+    /** Состояние Цвета 2 */
+    val color2 = remember {
+        mutableStateOf(Color.Yellow)
+    }
+    /** Состояние Цвета 3 */
+    val color3 = remember {
+        mutableStateOf(Color.Red)
+    }
 
     /** Карточка */
     Card(
         modifier = Modifier
                 .fillMaxWidth() // Растянуть во всю ширину экрана
-                .padding(10.dp), // Поля
+                .padding(10.dp) // Поля
+                .clickable { // Обработчик клика
+                    /* Проверить состояние счётчика */
+                    when(++counter.intValue) {
+                        1 -> { // Если равен 1
+                            color1.value = Color.Blue // Сделать фон Блока синим (Box)
+                            color2.value = Color.Green // Сделать фон Строки зелёным (Row)
+                            color3.value = Color.Yellow // Сделать фон Столбца жёлтым (Column)
+                        }
+                        2 -> { // Если равен 2
+                            color1.value = Color.Magenta // Сделать фон Блока сиреневым (Box)
+                            color2.value = Color.Blue // Сделать фон Строки синим (Row)
+                            color3.value = Color.Green // Сделать фон Столбца зелёным (Column)
+                        }
+                        3 -> { // Если равен 3
+                            color1.value = Color.Red // Сделать фон Блока красным (Box)
+                            color2.value = Color.Magenta // Сделать фон Строки сиреневым (Row)
+                            color3.value = Color.Blue // Сделать фон Столбца синим (Column)
+                        }
+                        4 -> { // Если равен 4
+                            color1.value = Color.Yellow // Сделать фон Блока жёлтым (Box)
+                            color2.value = Color.Red // Сделать фон Строки красным (Row)
+                            color3.value = Color.Magenta // Сделать фон Столбца сиреневым (Column)
+                        }
+                        5 -> { // Если равен 5
+                            color1.value = Color.Green // Сделать фон Блока зелёным (Box)
+                            color2.value = Color.Yellow // Сделать фон Строки жёлтым (Row)
+                            color3.value = Color.Red // Сделать фон Столбца красным (Column)
+                            counter.intValue = 0
+                        }
+                    }
+                },
         /* Форма - прямоугольник с закруглёнными углами */
         shape = RoundedCornerShape(15.dp),
         /* Поднятие карточки над поверхностью */
@@ -96,12 +192,12 @@ fun ListItem(name: String, prof: String) {
         Box(
             modifier = Modifier
                     .fillMaxWidth() // Растянуть во всю ширину экрана
-                    .background(Color.Green) // Цвет фона
+                    .background(color1.value) // Цвет фона
         ) {
             /** Строка */
             Row(
                 modifier = Modifier
-                        .background(Color.Yellow), // Цвет фона
+                        .background(color2.value), // Цвет фона
                         /* Выравнивание по центру вертикали */
                         verticalAlignment = Alignment.CenterVertically
             ) {
@@ -129,7 +225,7 @@ fun ListItem(name: String, prof: String) {
                             .padding(end = 16.dp)
 
                             /* Затем изменяем цвет фона */
-                            .background(Color.Red)
+                            .background(color3.value)
 
                             /* Устанавливаем поле слева
                              * (после изменения цвета фона),
@@ -139,10 +235,12 @@ fun ListItem(name: String, prof: String) {
                 ) {
                     /** Список текстовых строк */
                     Text(
-                        text = name // Имя из переменной функции
+                        /* Имя из переменной функции + знаяение счётчика */
+                        text = name + counter.intValue.toString()
                     )
                     Text(
-                        text = prof // Профессия из переменной функции
+                        /* Профессия из переменной функции + знаяение счётчика */
+                        text = prof + counter.intValue.toString()
                     )
                 }
             }
