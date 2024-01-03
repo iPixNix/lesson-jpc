@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
 fun ScreenMain() {
 
     // Строка
-    Row (
+    Column (
         // Модификаторы
         modifier = Modifier
                 // Цвет фона
@@ -41,7 +41,7 @@ fun ScreenMain() {
                 // Растянуть Строку на весь экран
                 .fillMaxSize(),
 
-                /* Расположение элементов по горизонтали:
+                /* Расположение элементов по вертикали:
                  *
                  * Arrangement.SpaceBetween -
                  * крайние элементы прижимаются к краям родителя,
@@ -59,15 +59,15 @@ fun ScreenMain() {
                  * чтобы расстояние между любыми двумя элементами было одинаковым
                  * и расстояние от крайних элементов до края было таким же.
                  */
-                horizontalArrangement = Arrangement.SpaceEvenly,
+                verticalArrangement = Arrangement.SpaceEvenly,
 
-                /* Выравнивание элементов по вертикали:
+                /* Выравнивание элементов по горизонтали:
                  * Alignment.Top - выравнивание сверху.
                  * Alignment.CenterVertically - выравнивание по центру.
                  * Alignment.Bottom - выравнивание снизу.
                  */
-                verticalAlignment = Alignment.CenterVertically
-    ){
+                horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         // Элемент Text 1
         Text(
             text = "Text 1" // Текст содержит слово "Text 1"
