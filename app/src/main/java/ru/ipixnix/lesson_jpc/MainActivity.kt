@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -40,7 +41,7 @@ fun ScreenMain() {
                 // Растянуть Строку на весь экран
                 .fillMaxSize(),
 
-                /* Выравнивание элементов по горизонтали:
+                /* Расположение элементов по горизонтали:
                  *
                  * Arrangement.SpaceBetween -
                  * крайние элементы прижимаются к краям родителя,
@@ -58,7 +59,14 @@ fun ScreenMain() {
                  * чтобы расстояние между любыми двумя элементами было одинаковым
                  * и расстояние от крайних элементов до края было таким же.
                  */
-                horizontalArrangement = Arrangement.SpaceEvenly
+                horizontalArrangement = Arrangement.SpaceEvenly,
+
+                /* Выравнивание элементов по вертикали:
+                 * Alignment.Top - выравнивание сверху.
+                 * Alignment.CenterVertically - выравнивание по центру.
+                 * Alignment.Bottom - выравнивание снизу.
+                 */
+                verticalAlignment = Alignment.CenterVertically
     ){
         // Элемент Text 1
         Text(
