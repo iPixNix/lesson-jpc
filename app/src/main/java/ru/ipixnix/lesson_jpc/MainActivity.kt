@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -37,7 +38,27 @@ fun ScreenMain() {
                 // Цвет фона
                 .background(Color.Yellow)
                 // Растянуть Строку на весь экран
-                .fillMaxSize()
+                .fillMaxSize(),
+
+                /* Выравнивание элементов по горизонтали:
+                 *
+                 * Arrangement.SpaceBetween -
+                 * крайние элементы прижимаются к краям родителя,
+                 * оставшиеся выстраиваются внутри контейнера равномерно,
+                 * так, чтобы между ними были одинаковые отступы.
+                 *
+                 * Arrangement.SpaceAround -
+                 * свободное пространство делится поровну между элементами
+                 * и по половине от этой доли размещается по бокам от каждого элемента.
+                 * Таким образом, между соседними элементами будет равное расстояние,
+                 * а снаружи крайних элементов — по половине этого расстояния.
+                 *
+                 * Arrangement.SpaceEvenly -
+                 * свободное место будет распределено так,
+                 * чтобы расстояние между любыми двумя элементами было одинаковым
+                 * и расстояние от крайних элементов до края было таким же.
+                 */
+                horizontalArrangement = Arrangement.SpaceEvenly
     ){
         // Элемент Text 1
         Text(
