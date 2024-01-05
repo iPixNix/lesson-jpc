@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -37,11 +38,19 @@ fun ScreenMain() {
         modifier = Modifier
                 .fillMaxSize() // Растянуть по размеру Родителя
     ) {
-        /* Список содержит 100 элементов */
-        items(100) {
-            /* Каждый элемент списка содержит Текст */
+        /* Динамический список (может содержать разное количество элементов) */
+        itemsIndexed(
+            /* Список из пяти элементов */
+            listOf("Первый", "Второй", "Третий", "Четвёртый", "Пятый")
+        ) {
+            /* Индекс списка (index), содержимое элемента (item).
+             * Если index или item не используется в коде,
+             * необходимо указать вместо него нижнее подчёркивание (_).
+             * Например: "_, item ->" или "index, _ ->" */
+            index, item ->
+            /* В каждом элементе списка Индекс + Текст */
             Text(
-                text = "Текст $it", // Текст + Индекс элемента
+                text = "$index - $item", // Индекс и содержимое элемента
                 fontSize = 32.sp, // Размер текста
                 /* Модификаторы */
                 modifier = Modifier
