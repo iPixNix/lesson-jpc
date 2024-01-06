@@ -3,17 +3,14 @@ package ru.ipixnix.lesson_jpc
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
 
@@ -30,33 +27,34 @@ class MainActivity : ComponentActivity() {
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun ScreenMain() {
-    /* Ленивая Колонка */
-    LazyColumn(
-        /* Выравнивание по горизонтали */
-        horizontalAlignment = Alignment.CenterHorizontally,
+    /* Ленивый Ряд */
+    LazyRow(
         /* Модификаторы */
         modifier = Modifier
-                .fillMaxSize() // Растянуть по размеру Родителя
+                .fillMaxWidth() // Растянуть по ширине Родителя
+                .background(Color.LightGray) // Цвет фона
     ) {
         /* Динамический список (может содержать разное количество элементов) */
         itemsIndexed(
-            /* Список из пяти элементов */
-            listOf("Первый", "Второй", "Третий", "Четвёртый", "Пятый")
+            listOf( // Список из элементов пользовательского типа ItemRowModel
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 1"),
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 2"),
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 3"),
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 4"),
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 5"),
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 6"),
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 7"),
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 8"),
+                ItemRowModel(R.drawable.ipixnix, "iPixNix 9")
+            )
         ) {
             /* Индекс списка (index), содержимое элемента (item).
              * Если index или item не используется в коде,
              * необходимо указать вместо него нижнее подчёркивание (_).
              * Например: "_, item ->" или "index, _ ->" */
-            index, item ->
-            /* В каждом элементе списка Индекс + Текст */
-            Text(
-                text = "$index - $item", // Индекс и содержимое элемента
-                fontSize = 32.sp, // Размер текста
-                /* Модификаторы */
-                modifier = Modifier
-                        /* Поля: сверху и снизу */
-                        .padding(vertical = 10.dp)
-            )
+            _, item ->
+            /* В каждом элементе списка Класс данных (Data Class) */
+            ItemRow(item = item)
         }
     }
 }
