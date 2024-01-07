@@ -27,6 +27,7 @@ class MainActivity : ComponentActivity() {
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun ScreenMain() {
+
     /* Ленивая Колонка */
     LazyColumn(
         /* Модификаторы */
