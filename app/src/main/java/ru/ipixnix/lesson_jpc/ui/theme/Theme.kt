@@ -117,78 +117,86 @@ import androidx.core.view.WindowCompat
  *
  */
 
-/** Тёмная тема */
+/** Тёмная тема **/
 private val DarkColorScheme = darkColorScheme(
+
     /* Главные цвета */
-    primary = clrDPrimary,
-    onPrimary = clrDOnPrimary,
-    secondary = clrDSecondary,
-    onSecondary = clrDOnSecondary,
-    tertiary = clrDTertiary,
-    onTertiary = clrDOnTertiary,
-    inversePrimary = clrDInversePrimary,
+    primary = clrDPrimary, // Первичный цвет
+    onPrimary = clrDOnPrimary, // На первичном цвете
+    secondary = clrDSecondary, // Вторичный цвет
+    onSecondary = clrDOnSecondary, // На вторичном цвете
+    tertiary = clrDTertiary, // Третичный цвет
+    onTertiary = clrDOnTertiary, // На третичном цвете
+    inversePrimary = clrDInversePrimary, // Инвертированный первичный цвет
+
     /* Дополнительные цвета */
-    background = clrDBackground,
-    onBackground = clrDOnBackground,
-    error = clrDError,
-    onError = clrDOnError,
-    outline = clrDOutline,
-    outlineVariant = clrDOutlineVariant,
-    scrim = clrDScrim,
+    background = clrDBackground, // Фоновый цвет
+    onBackground = clrDOnBackground, // На фоновом цвете
+    error = clrDError, // Цвет ошибки
+    onError = clrDOnError, // На цвете ошибки
+    outline = clrDOutline, // Контурный цвет
+    outlineVariant = clrDOutlineVariant, // Вариант контурного цвета
+    scrim = clrDScrim, // Цвет холста
+
     /* Контейнеры */
-    primaryContainer = clrDPrimaryContainer,
-    onPrimaryContainer = clrDOnPrimaryContainer,
-    secondaryContainer = clrDSecondaryContainer,
-    onSecondaryContainer = clrDOnSecondaryContainer,
-    tertiaryContainer = clrDTertiaryContainer,
-    onTertiaryContainer = clrDOnTertiaryContainer,
-    errorContainer = clrDErrorContainer,
-    onErrorContainer = clrDOnErrorContainer,
+    primaryContainer = clrDPrimaryContainer, // Первичный контейнер
+    onPrimaryContainer = clrDOnPrimaryContainer, // На первичном контейнере
+    secondaryContainer = clrDSecondaryContainer, // Вторичный контейнер
+    onSecondaryContainer = clrDOnSecondaryContainer, // На вторичном контейнере
+    tertiaryContainer = clrDTertiaryContainer, // Третичный контейнер
+    onTertiaryContainer = clrDOnTertiaryContainer, // На третичном контейнере
+    errorContainer = clrDErrorContainer, // Контейнер ошибки
+    onErrorContainer = clrDOnErrorContainer, // На контейнере ошибки
+
     /* Поверхности */
-    surface = clrDSurface,
-    onSurface = clrDOnSurface,
-    surfaceVariant = clrDSurfaceVariant,
-    onSurfaceVariant = clrDOnSurfaceVariant,
-    inverseSurface = clrDInverseSurface,
-    inverseOnSurface = clrDInverseOnSurface,
-    surfaceTint = clrDSurfaceTint
+    surface = clrDSurface, // Поверхность
+    onSurface = clrDOnSurface, // На поверхности
+    surfaceVariant = clrDSurfaceVariant, // Вариант поверхности
+    onSurfaceVariant = clrDOnSurfaceVariant, // На варианте поверхности
+    inverseSurface = clrDInverseSurface, // Инвертированная поверхность
+    inverseOnSurface = clrDInverseOnSurface, // На инвертированной поверхности
+    surfaceTint = clrDSurfaceTint // Компоненты с тоном высоты (чем выше - тем ярче)
 )
 
-/** Светлая тема */
+/** Светлая тема **/
 private val LightColorScheme = lightColorScheme(
+
     /* Главные цвета */
-    primary = clrLPrimary,
-    onPrimary = clrLOnPrimary,
-    secondary = clrLSecondary,
-    onSecondary = clrLOnSecondary,
-    tertiary = clrLTertiary,
-    onTertiary = clrLOnTertiary,
-    inversePrimary = clrLInversePrimary,
+    primary = clrLPrimary, // Первичный цвет
+    onPrimary = clrLOnPrimary, // На первичном цвете
+    secondary = clrLSecondary, // Вторичный цвет
+    onSecondary = clrLOnSecondary, // На вторичном цвете
+    tertiary = clrLTertiary, // Третичный цвет
+    onTertiary = clrLOnTertiary, // На третичном цвете
+    inversePrimary = clrLInversePrimary, // Инвертированный первичный цвет
+
     /* Дополнительные цвета */
-    background = clrLBackground,
-    onBackground = clrLOnBackground,
-    error = clrLError,
-    onError = clrLOnError,
-    outline = clrLOutline,
-    outlineVariant = clrLOutlineVariant,
-    scrim = clrLScrim,
+    background = clrLBackground, // Фоновый цвет
+    onBackground = clrLOnBackground, // На фоновом цвете
+    error = clrLError, // Цвет ошибки
+    onError = clrLOnError, // На цвете ошибки
+    outline = clrLOutline, // Контурный цвет
+    outlineVariant = clrLOutlineVariant, // Вариант контурного цвета
+    scrim = clrLScrim, // Цвет холста
+
     /* Контейнеры */
-    primaryContainer = clrLPrimaryContainer,
-    onPrimaryContainer = clrLOnPrimaryContainer,
-    secondaryContainer = clrLSecondaryContainer,
-    onSecondaryContainer = clrLOnSecondaryContainer,
-    tertiaryContainer = clrLTertiaryContainer,
-    onTertiaryContainer = clrLOnTertiaryContainer,
-    errorContainer = clrLErrorContainer,
-    onErrorContainer = clrLOnErrorContainer,
+    primaryContainer = clrLPrimaryContainer, // Первичный контейнер
+    onPrimaryContainer = clrLOnPrimaryContainer, // На первичном контейнере
+    secondaryContainer = clrLSecondaryContainer, // Вторичный контейнер
+    onSecondaryContainer = clrLOnSecondaryContainer, // На вторичном контейнере
+    tertiaryContainer = clrLTertiaryContainer, // Третичный контейнер
+    onTertiaryContainer = clrLOnTertiaryContainer, // На третичном контейнере
+    errorContainer = clrLErrorContainer, // Контейнер ошибки
+    onErrorContainer = clrLOnErrorContainer, // На контейнере ошибки
+
     /* Поверхности */
-    surface = clrLSurface,
-    onSurface = clrLOnSurface,
-    surfaceVariant = clrLSurfaceVariant,
-    onSurfaceVariant = clrLOnSurfaceVariant,
-    inverseSurface = clrLInverseSurface,
-    inverseOnSurface = clrLInverseOnSurface,
-    surfaceTint = clrLSurfaceTint
+    surface = clrLSurface, // Поверхность
+    onSurface = clrLOnSurface, // На поверхности
+    surfaceVariant = clrLSurfaceVariant, // Вариант поверхности
+    onSurfaceVariant = clrLOnSurfaceVariant, // На варианте поверхности
+    inverseSurface = clrLInverseSurface, // Инвертированная поверхность
+    inverseOnSurface = clrLInverseOnSurface, // На инвертированной поверхности
+    surfaceTint = clrLSurfaceTint // Компоненты с тоном высоты (чем выше - тем ярче)
 )
 
 @Composable
@@ -210,7 +218,7 @@ fun LessonjpcTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.secondary.toArgb()
+            window.statusBarColor = colorScheme.surface.toArgb()
             WindowCompat.getInsetsController(
                 window,
                 view

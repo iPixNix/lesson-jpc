@@ -1,72 +1,80 @@
 package ru.ipixnix.lesson_jpc.ui.theme
 
-/** Тёмная тема */
+/** Тёмная тема **/
+
 /* Главные цвета */
-val clrDPrimary = clrBlueMiddle // Основной
-val clrDOnPrimary = clrWhite // На Основном
-val clrDSecondary = clrBlueDeep // Вторичный
-val clrDOnSecondary = clrWhite // На Вторичном
-val clrDTertiary = clrPurpleMiddle // Третичный
-val clrDOnTertiary = clrWhite // На Третичном
-val clrDInversePrimary = clrYellowMiddle // Инвертированный Основной
+val clrDPrimary = clrBlueMiddle // Первичный цвет
+val clrDOnPrimary = clrWhite // На первичном цвете
+val clrDSecondary = clrBlueDeep // Вторичный цвет
+val clrDOnSecondary = clrWhite // На вторичном цвете
+val clrDTertiary = clrPurpleMiddle // Третичный цвет
+val clrDOnTertiary = clrWhite // На третичном цвете
+val clrDInversePrimary = clrYellowMiddle // Инвертированный первичный цвет
+
 /* Дополнительные цвета */
-val clrDBackground = clrBlackDark // Фон
-val clrDOnBackground = clrWhite // На Фоне
-val clrDError = clrRedMiddle // Ошибка
-val clrDOnError = clrWhite // На Ошибке
-val clrDOutline = clrSkyMiddle // Контур
-val clrDOutlineVariant = clrSkyDeep // Контур Вариант
-val clrDScrim = clrGrayMiddle // Сетка
+val clrDBackground = clrBlackDark // Фоновый цвет
+val clrDOnBackground = clrWhite // На фоновом цвете
+val clrDError = clrRedMiddle // Цвет ошибки
+val clrDOnError = clrWhite // На цвете ошибки
+val clrDOutline = clrSkyMiddle // Контурный цвет
+val clrDOutlineVariant = clrSkyDeep // Вариант контурного цвета
+val clrDScrim = clrGrayMiddle // Цвет холста
+
 /* Контейнеры */
-val clrDPrimaryContainer = clrBlueMiddle // На Поверхности
-val clrDOnPrimaryContainer = clrWhite // На Поверхности
-val clrDSecondaryContainer = clrBlueDeep // На Поверхности
-val clrDOnSecondaryContainer = clrWhite // На Поверхности
-val clrDTertiaryContainer = clrPurpleMiddle // На Поверхности
-val clrDOnTertiaryContainer = clrWhite // На Поверхности
-val clrDErrorContainer = clrRedMiddle // Поверхность
-val clrDOnErrorContainer = clrWhite // Поверхность
+val clrDPrimaryContainer = clrBlueMiddle // Первичный контейнер
+val clrDOnPrimaryContainer = clrWhite // На первичном контейнере
+val clrDSecondaryContainer = clrBlueDeep // Вторичный контейнер
+val clrDOnSecondaryContainer = clrWhite // На вторичном контейнере
+val clrDTertiaryContainer = clrPurpleMiddle // Третичный контейнер
+val clrDOnTertiaryContainer = clrWhite // На третичном контейнере
+val clrDErrorContainer = clrRedMiddle // Контейнер ошибки
+val clrDOnErrorContainer = clrWhite // На контейнере ошибки
+
 /* Поверхности */
 val clrDSurface = clrBlueDark // Поверхность
 val clrDOnSurface = clrWhite // На Поверхности
-val clrDSurfaceVariant = clrPurpleDark // На Поверхности
-val clrDOnSurfaceVariant = clrWhite // На Поверхности
-val clrDInverseSurface = clrYellowDark // Инвертированная Поверхность
-val clrDInverseOnSurface = clrBlack // На Инвертированной Поверхности
-val clrDSurfaceTint = clrBlueDark // На Поверхности
+val clrDSurfaceVariant = clrPurpleDark // Вариант поверхности
+val clrDOnSurfaceVariant = clrWhite // На варианте поверхности
+val clrDInverseSurface = clrYellowDark // Инвертированная поверхность
+val clrDInverseOnSurface = clrBlack // На инвертированной поверхности
+val clrDSurfaceTint = clrBlueDark // Компоненты с тоном высоты (чем выше - тем ярче)
 
 
-/** Светлая тема */
+/** Светлая тема **/
+
 /* Главные цвета */
-val clrLPrimary = clrBlueMiddle // Основной
-val clrLOnPrimary = clrWhite // На Основном
-val clrLSecondary = clrBlueDeep // Вторичный
-val clrLOnSecondary = clrWhite // На Вторичном
-val clrLTertiary = clrPurpleMiddle // Третичный
-val clrLOnTertiary = clrWhite // На Третичном
-val clrLInversePrimary = clrYellowMiddle // Инвертированный Основной
+val clrLPrimary = clrBlueMiddle // Первичный цвет
+val clrLOnPrimary = clrWhite // На первичном цвете
+val clrLSecondary = clrBlueDeep // Вторичный цвет
+val clrLOnSecondary = clrWhite // На вторичном цвете
+val clrLTertiary = clrPurpleMiddle // Третичный цвет
+val clrLOnTertiary = clrWhite // На третичном цвете
+val clrLInversePrimary = clrYellowMiddle // Инвертированный первичный цвет
+
 /* Дополнительные цвета */
-val clrLBackground = clrWhiteLight // Фон
-val clrLOnBackground = clrBlack // На Фоне
-val clrLError = clrRedMiddle // Ошибка
-val clrLOnError = clrWhite // На Ошибке
-val clrLOutline = clrSkyMiddle // Контур
-val clrLOutlineVariant = clrSkyDeep // Контур Вариант
-val clrLScrim = clrGrayMiddle // Сетка
+val clrLBackground = clrBlackDark // Фоновый цвет
+val clrLOnBackground = clrWhite // На фоновом цвете
+val clrLError = clrRedMiddle // Цвет ошибки
+val clrLOnError = clrWhite // На цвете ошибки
+val clrLOutline = clrSkyMiddle // Контурный цвет
+val clrLOutlineVariant = clrSkyDeep // Вариант контурного цвета
+val clrLScrim = clrGrayMiddle // Цвет холста
+
 /* Контейнеры */
-val clrLPrimaryContainer = clrBlueMiddle // На Поверхности
-val clrLOnPrimaryContainer = clrWhite // На Поверхности
-val clrLSecondaryContainer = clrBlueDeep // На Поверхности
-val clrLOnSecondaryContainer = clrWhite // На Поверхности
-val clrLTertiaryContainer = clrPurpleMiddle // На Поверхности
-val clrLOnTertiaryContainer = clrWhite // На Поверхности
-val clrLErrorContainer = clrRedMiddle // Поверхность
-val clrLOnErrorContainer = clrWhite // Поверхность
+val clrLPrimaryContainer = clrBlueMiddle // Первичный контейнер
+val clrLOnPrimaryContainer = clrWhite // На первичном контейнере
+val clrLSecondaryContainer = clrBlueDeep // Вторичный контейнер
+val clrLOnSecondaryContainer = clrWhite // На вторичном контейнере
+val clrLTertiaryContainer = clrPurpleMiddle // Третичный контейнер
+val clrLOnTertiaryContainer = clrWhite // На третичном контейнере
+val clrLErrorContainer = clrRedMiddle // Контейнер ошибки
+val clrLOnErrorContainer = clrWhite // На контейнере ошибки
+
 /* Поверхности */
-val clrLSurface = clrBlueLight // Поверхность
+val clrLSurface = clrBlueDark // Поверхность
 val clrLOnSurface = clrWhite // На Поверхности
-val clrLSurfaceVariant = clrPurpleLight // На Поверхности
-val clrLOnSurfaceVariant = clrWhite // На Поверхности
-val clrLInverseSurface = clrYellowLight // Инвертированная Поверхность
-val clrLInverseOnSurface = clrBlack // На Инвертированной Поверхности
-val clrLSurfaceTint = clrBlueLight // На Поверхности
+val clrLSurfaceVariant = clrPurpleDark // Вариант поверхности
+val clrLOnSurfaceVariant = clrWhite // На варианте поверхности
+val clrLInverseSurface = clrYellowDark // Инвертированная поверхность
+val clrLInverseOnSurface = clrBlack // На инвертированной поверхности
+val clrLSurfaceTint = clrBlueDark // Компоненты с тоном высоты (чем выше - тем ярче)
