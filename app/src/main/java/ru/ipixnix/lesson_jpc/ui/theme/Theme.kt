@@ -28,17 +28,14 @@ import androidx.core.view.WindowCompat
  *
  * Дополнительные сведения о цветах см. в разделе цвета Material Design.
  *
+ * ===================
+ * || ГЛАВНЫЕ ЦВЕТА ||
+ * ===================
+ *
  * @ primary — Первичный цвет. Это цвет, который чаще всего отображается на экранах и в
  * компонентах вашего приложения.
  *
  * @ onPrimary — Цвет используемый для текста и значков, отображаемых поверх первичного цвета.
- *
- * @ primaryContainer — Цвет первичных контейнеров.
- *
- * @ onPrimaryContainer — Цвет содержимого, которое отображается поверх первичного контейнера.
- *
- * @ inversePrimary — Цвет, который будет использоваться в качестве первичного цвета в местах,
- * где необходима инверсная цветовая схема, например, кнопка на SnackBar.
  *
  * @ secondary — Вторичный цвет дает больше возможностей подчеркнуть и выделить ваш продукт.
  * Вторичные цвета лучше всего подходят для:
@@ -49,22 +46,56 @@ import androidx.core.view.WindowCompat
  *
  * @ onSecondary — Цвет используемый для текста и значков, отображаемых поверх вторичного цвета.
  *
- * @ secondaryContainer — Цвет вторичных контейнеров.
- *
- * @ onSecondaryContainer — Цвет содержимого, которое отображается поверх вторичного контейнера.
- *
  * @ tertiary — Третичный цвет можно использовать для баланса основных и вторичных цветов
  * или для привлечения повышенного внимания к такому элементу, как поле ввода.
  *
  * @ onTertiary — Цвет используемый для текста и значков, отображаемых поверх третичного цвета.
  *
- * @ tertiaryContainer — Цвет третичных контейнеров.
+ * @ inversePrimary — Цвет, который будет использоваться в качестве первичного цвета в местах,
+ * где необходима инверсная цветовая схема, например, кнопка на SnackBar.
  *
- * @ onTertiaryContainer — Цвет содержимого, которое отображается поверх третичного контейнера.
+ * ==========================
+ * || ДОПОЛНИТЕЛЬНЫЕ ЦВЕТА ||
+ * ==========================
  *
  * @ background — Цвет фона, который появляется за прокручиваемым содержимым.
  *
  * @ onBackground — Цвет используемый для текста и значков, отображаемых поверх цвета фона.
+ *
+ * @ error — Цвет ошибки используется для обозначения ошибок в компонентах, например
+ * недопустимого текста в текстовом поле.
+ *
+ * @ onError — Цвет используемый для текста и значков, отображаемых поверх цвета ошибки.
+ *
+ * @ outline — Цвет, используемый для границ декоративных элементов.
+ *
+ * @ outlineVariant — Вариант цвета границ элементов, когда не требуется сильный контраст.
+ *
+ * @ scrim — Цвет холста, скрывающего содержимое.
+ *
+ * ================
+ * || КОНТЕЙНЕРЫ ||
+ * ================
+ *
+ * @ primaryContainer — Цвет первичных контейнеров.
+ *
+ * @ onPrimaryContainer — Цвет содержимого, которое отображается поверх первичного контейнера.
+ *
+ * @ secondaryContainer — Цвет вторичных контейнеров.
+ *
+ * @ onSecondaryContainer — Цвет содержимого, которое отображается поверх вторичного контейнера.
+ *
+ * @ tertiaryContainer — Цвет третичных контейнеров.
+ *
+ * @ onTertiaryContainer — Цвет содержимого, которое отображается поверх третичного контейнера.
+ *
+ * @ errorContainer — Предпочтительный тональный цвет контейнеров с ошибками.
+ *
+ * @ onErrorContainer — Цвет содержимого, которое отображается поверх контейнера с ошибкой.
+ *
+ * =================
+ * || ПОВЕРХНОСТИ ||
+ * =================
  *
  * @ surface — Цвет поверхностей компонентов, таких как карточки, листы и меню.
  *
@@ -75,29 +106,14 @@ import androidx.core.view.WindowCompat
  * @ onSurfaceVariant — Цвет используемый для текста и значков, отображаемых поверх варианта цвета
  * поверхности.
  *
- * @ surfaceTint — Этот цвет будет использоваться компонентами, которые применяют повышение тона
- * и наносятся поверх поверхности. Чем выше высота, тем больше используется этот цвет.
- *
  * @ inverseSurface — Цвет, резко контрастирующий с основным цветом поверхностей. Полезно для
  * поверхностей, которые располагаются поверх других поверхностей.
  *
  * @ inverseOnSurface — Цвет, который хорошо контрастирует с inverseSurface. Полезно для
  * содержимого, которое находится поверх контейнеров inverseSurface.
  *
- * @ error — Цвет ошибки используется для обозначения ошибок в компонентах, например
- * недопустимого текста в текстовом поле.
- *
- * @ onError — Цвет используемый для текста и значков, отображаемых поверх цвета ошибки.
- *
- * @ errorContainer — Предпочтительный тональный цвет контейнеров с ошибками.
- *
- * @ onErrorContainer — Цвет содержимого, которое отображается поверх контейнера с ошибкой.
- *
- * @ outline — Цвет, используемый для границ декоративных элементов.
- *
- * @ outlineVariant — Вариант цвета границ элементов, когда не требуется сильный контраст.
- *
- * @ scrim — Цвет холста, скрывающего содержимое.
+ * @ surfaceTint — Этот цвет будет использоваться компонентами, которые применяют повышение тона
+ * и наносятся поверх поверхности. Чем выше высота, тем больше используется этот цвет.
  *
  */
 
@@ -106,11 +122,11 @@ private val DarkColorScheme = darkColorScheme(
     /* Главные цвета */
     primary = clrDPrimary,
     onPrimary = clrDOnPrimary,
-    inversePrimary = clrDInversePrimary,
     secondary = clrDSecondary,
     onSecondary = clrDOnSecondary,
     tertiary = clrDTertiary,
     onTertiary = clrDOnTertiary,
+    inversePrimary = clrDInversePrimary,
     /* Дополнительные цвета */
     background = clrDBackground,
     onBackground = clrDOnBackground,
@@ -119,14 +135,6 @@ private val DarkColorScheme = darkColorScheme(
     outline = clrDOutline,
     outlineVariant = clrDOutlineVariant,
     scrim = clrDScrim,
-    /* Поверхности */
-    surface = clrDSurface,
-    onSurface = clrDOnSurface,
-    inverseSurface = clrDInverseSurface,
-    inverseOnSurface = clrDInverseOnSurface,
-    surfaceVariant = clrDSurfaceVariant,
-    onSurfaceVariant = clrDOnSurfaceVariant,
-    surfaceTint = clrDSurfaceTint,
     /* Контейнеры */
     primaryContainer = clrDPrimaryContainer,
     onPrimaryContainer = clrDOnPrimaryContainer,
@@ -135,7 +143,15 @@ private val DarkColorScheme = darkColorScheme(
     tertiaryContainer = clrDTertiaryContainer,
     onTertiaryContainer = clrDOnTertiaryContainer,
     errorContainer = clrDErrorContainer,
-    onErrorContainer = clrDOnErrorContainer
+    onErrorContainer = clrDOnErrorContainer,
+    /* Поверхности */
+    surface = clrDSurface,
+    onSurface = clrDOnSurface,
+    surfaceVariant = clrDSurfaceVariant,
+    onSurfaceVariant = clrDOnSurfaceVariant,
+    inverseSurface = clrDInverseSurface,
+    inverseOnSurface = clrDInverseOnSurface,
+    surfaceTint = clrDSurfaceTint
 )
 
 /** Светлая тема */
@@ -143,11 +159,11 @@ private val LightColorScheme = lightColorScheme(
     /* Главные цвета */
     primary = clrLPrimary,
     onPrimary = clrLOnPrimary,
-    inversePrimary = clrLInversePrimary,
     secondary = clrLSecondary,
     onSecondary = clrLOnSecondary,
     tertiary = clrLTertiary,
     onTertiary = clrLOnTertiary,
+    inversePrimary = clrLInversePrimary,
     /* Дополнительные цвета */
     background = clrLBackground,
     onBackground = clrLOnBackground,
@@ -156,14 +172,6 @@ private val LightColorScheme = lightColorScheme(
     outline = clrLOutline,
     outlineVariant = clrLOutlineVariant,
     scrim = clrLScrim,
-    /* Поверхности */
-    surface = clrLSurface,
-    onSurface = clrLOnSurface,
-    inverseSurface = clrLInverseSurface,
-    inverseOnSurface = clrLInverseOnSurface,
-    surfaceVariant = clrLSurfaceVariant,
-    onSurfaceVariant = clrLOnSurfaceVariant,
-    surfaceTint = clrLSurfaceTint,
     /* Контейнеры */
     primaryContainer = clrLPrimaryContainer,
     onPrimaryContainer = clrLOnPrimaryContainer,
@@ -172,7 +180,15 @@ private val LightColorScheme = lightColorScheme(
     tertiaryContainer = clrLTertiaryContainer,
     onTertiaryContainer = clrLOnTertiaryContainer,
     errorContainer = clrLErrorContainer,
-    onErrorContainer = clrLOnErrorContainer
+    onErrorContainer = clrLOnErrorContainer,
+    /* Поверхности */
+    surface = clrLSurface,
+    onSurface = clrLOnSurface,
+    surfaceVariant = clrLSurfaceVariant,
+    onSurfaceVariant = clrLOnSurfaceVariant,
+    inverseSurface = clrLInverseSurface,
+    inverseOnSurface = clrLInverseOnSurface,
+    surfaceTint = clrLSurfaceTint
 )
 
 @Composable

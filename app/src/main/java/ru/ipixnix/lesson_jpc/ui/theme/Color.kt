@@ -5,7 +5,6 @@ package ru.ipixnix.lesson_jpc.ui.theme
 val clrDPrimary = clrBlueMiddle // Основной
 val clrDOnPrimary = clrWhite // На Основном
 val clrDInversePrimary = clrYellowMiddle // Инвертированный Основной
-val clrDInverseOnPrimary = clrBlack // На Инвертированной Поверхности
 val clrDSecondary = clrBlueDeep // Вторичный
 val clrDOnSecondary = clrWhite // На Вторичном
 val clrDTertiary = clrPurpleMiddle // Третичный
