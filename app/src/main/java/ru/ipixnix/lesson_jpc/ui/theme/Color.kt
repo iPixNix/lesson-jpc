@@ -1,80 +1,80 @@
 package ru.ipixnix.lesson_jpc.ui.theme
 
-/** Тёмная тема **/
-
-/* Главные цвета */
-val clrDPrimary = clrBlueMiddle // Первичный цвет
-val clrDOnPrimary = clrWhite // На первичном цвете
-val clrDSecondary = clrBlueDeep // Вторичный цвет
-val clrDOnSecondary = clrWhite // На вторичном цвете
-val clrDTertiary = clrPurpleMiddle // Третичный цвет
-val clrDOnTertiary = clrWhite // На третичном цвете
-val clrDInversePrimary = clrYellowMiddle // Инвертированный первичный цвет
-
-/* Дополнительные цвета */
-val clrDBackground = clrBlackDark // Фоновый цвет
-val clrDOnBackground = clrWhite // На фоновом цвете
-val clrDError = clrRedMiddle // Цвет ошибки
-val clrDOnError = clrWhite // На цвете ошибки
-val clrDOutline = clrSkyMiddle // Контурный цвет
-val clrDOutlineVariant = clrSkyDeep // Вариант контурного цвета
-val clrDScrim = clrGrayMiddle // Цвет холста
-
-/* Контейнеры */
-val clrDPrimaryContainer = clrBlueMiddle // Первичный контейнер
-val clrDOnPrimaryContainer = clrWhite // На первичном контейнере
-val clrDSecondaryContainer = clrBlueDeep // Вторичный контейнер
-val clrDOnSecondaryContainer = clrWhite // На вторичном контейнере
-val clrDTertiaryContainer = clrPurpleMiddle // Третичный контейнер
-val clrDOnTertiaryContainer = clrWhite // На третичном контейнере
-val clrDErrorContainer = clrRedMiddle // Контейнер ошибки
-val clrDOnErrorContainer = clrWhite // На контейнере ошибки
-
-/* Поверхности */
-val clrDSurface = clrBlueDark // Поверхность
-val clrDOnSurface = clrWhite // На Поверхности
-val clrDSurfaceVariant = clrPurpleDark // Вариант поверхности
-val clrDOnSurfaceVariant = clrWhite // На варианте поверхности
-val clrDInverseSurface = clrYellowDark // Инвертированная поверхность
-val clrDInverseOnSurface = clrBlack // На инвертированной поверхности
-val clrDSurfaceTint = clrBlueDark // Компоненты с тоном высоты (чем выше - тем ярче)
-
-
 /** Светлая тема **/
 
 /* Главные цвета */
-val clrLPrimary = clrBlueMiddle // Первичный цвет
-val clrLOnPrimary = clrWhite // На первичном цвете
-val clrLSecondary = clrBlueDeep // Вторичный цвет
-val clrLOnSecondary = clrWhite // На вторичном цвете
-val clrLTertiary = clrPurpleMiddle // Третичный цвет
-val clrLOnTertiary = clrWhite // На третичном цвете
-val clrLInversePrimary = clrYellowMiddle // Инвертированный первичный цвет
+val lPrimary = Blue50 // Первичный цвет
+val lOnPrimary = Blue100 // На первичном цвете
+val lSecondary = Purple50 // Вторичный цвет
+val lOnSecondary = Purple100 // На вторичном цвете
+val lTertiary = Green50 // Третичный цвет
+val lOnTertiary = Green100 // На третичном цвете
+val lInversePrimary = Blue80 // Инвертированный первичный цвет
 
 /* Дополнительные цвета */
-val clrLBackground = clrBlackDark // Фоновый цвет
-val clrLOnBackground = clrWhite // На фоновом цвете
-val clrLError = clrRedMiddle // Цвет ошибки
-val clrLOnError = clrWhite // На цвете ошибки
-val clrLOutline = clrSkyMiddle // Контурный цвет
-val clrLOutlineVariant = clrSkyDeep // Вариант контурного цвета
-val clrLScrim = clrGrayMiddle // Цвет холста
+val lBackground = Grey100 // Фоновый цвет
+val lOnBackground = Grey0 // На фоновом цвете
+val lError = Red40 // Цвет ошибки
+val lOnError = Red100 // На цвете ошибки
+val lOutline = Grey40 // Контурный цвет
+val lOutlineVariant = Grey80 // Вариант контурного цвета
+val lScrim = Grey0 // Цвет холста
 
 /* Контейнеры */
-val clrLPrimaryContainer = clrBlueMiddle // Первичный контейнер
-val clrLOnPrimaryContainer = clrWhite // На первичном контейнере
-val clrLSecondaryContainer = clrBlueDeep // Вторичный контейнер
-val clrLOnSecondaryContainer = clrWhite // На вторичном контейнере
-val clrLTertiaryContainer = clrPurpleMiddle // Третичный контейнер
-val clrLOnTertiaryContainer = clrWhite // На третичном контейнере
-val clrLErrorContainer = clrRedMiddle // Контейнер ошибки
-val clrLOnErrorContainer = clrWhite // На контейнере ошибки
+val lPrimaryContainer = Blue99 // Первичный контейнер
+val lOnPrimaryContainer = Blue30 // На первичном контейнере
+val lSecondaryContainer = Purple99 // Вторичный контейнер
+val lOnSecondaryContainer = Purple30 // На вторичном контейнере
+val lTertiaryContainer = Green99 // Третичный контейнер
+val lOnTertiaryContainer = Green30 // На третичном контейнере
+val lErrorContainer = Red99 // Контейнер ошибки
+val lOnErrorContainer = Red30 // На контейнере ошибки
 
 /* Поверхности */
-val clrLSurface = clrBlueDark // Поверхность
-val clrLOnSurface = clrWhite // На Поверхности
-val clrLSurfaceVariant = clrPurpleDark // Вариант поверхности
-val clrLOnSurfaceVariant = clrWhite // На варианте поверхности
-val clrLInverseSurface = clrYellowDark // Инвертированная поверхность
-val clrLInverseOnSurface = clrBlack // На инвертированной поверхности
-val clrLSurfaceTint = clrBlueDark // Компоненты с тоном высоты (чем выше - тем ярче)
+val lSurface = Grey99 // Поверхность
+val lOnSurface = Grey20 // На Поверхности
+val lSurfaceVariant = Grey90 // Вариант поверхности
+val lOnSurfaceVariant = Grey10 // На варианте поверхности
+val lInverseSurface = Grey30 // Инвертированная поверхность
+val lInverseOnSurface = Grey99 // На инвертированной поверхности
+val lSurfaceTint = Grey90 // Компоненты с тоном высоты (чем выше - тем ярче)
+
+
+/** Тёмная тема **/
+
+/* Главные цвета */
+val dPrimary = Blue50 // Первичный цвет
+val dOnPrimary = Blue100 // На первичном цвете
+val dSecondary = Green50 // Вторичный цвет
+val dOnSecondary = Green100 // На вторичном цвете
+val dTertiary = Purple50 // Третичный цвет
+val dOnTertiary = Purple100 // На третичном цвете
+val dInversePrimary = Blue40 // Инвертированный первичный цвет
+
+/* Дополнительные цвета */
+val dBackground = Grey0 // Фоновый цвет
+val dOnBackground = Grey100 // На фоновом цвете
+val dError = Red50 // Цвет ошибки
+val dOnError = Red100 // На цвете ошибки
+val dOutline = Grey80 // Контурный цвет
+val dOutlineVariant = Grey20 // Вариант контурного цвета
+val dScrim = Grey100 // Цвет холста
+
+/* Контейнеры */
+val dPrimaryContainer = Blue0 // Первичный контейнер
+val dOnPrimaryContainer = Blue90 // На первичном контейнере
+val dSecondaryContainer = Purple0 // Вторичный контейнер
+val dOnSecondaryContainer = Purple90 // На вторичном контейнере
+val dTertiaryContainer = Green0 // Третичный контейнер
+val dOnTertiaryContainer = Green90 // На третичном контейнере
+val dErrorContainer = Red0 // Контейнер ошибки
+val dOnErrorContainer = Red90 // На контейнере ошибки
+
+/* Поверхности */
+val dSurface = Grey10 // Поверхность
+val dOnSurface = Grey95 // На Поверхности
+val dSurfaceVariant = Grey20 // Вариант поверхности
+val dOnSurfaceVariant = Grey99 // На варианте поверхности
+val dInverseSurface = Grey95 // Инвертированная поверхность
+val dInverseOnSurface = Grey20 // На инвертированной поверхности
+val dSurfaceTint = Grey20 // Компоненты с тоном высоты (чем выше - тем ярче)

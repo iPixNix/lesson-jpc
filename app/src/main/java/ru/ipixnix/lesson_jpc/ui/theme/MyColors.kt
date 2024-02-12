@@ -2,156 +2,95 @@ package ru.ipixnix.lesson_jpc.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-/** Белый */
-/* Белый (000/000/100) */
-val clrWhite = Color(0xFFFFFFFF)
-/* Белый Светлый (000/000/095) */
-val clrWhiteLight = Color(0xFFF2F2F2)
-/* Белый Средний (000/000/090) */
-val clrWhiteMiddle = Color(0xFFE5E5E5)
-/* Белый Глубокий (000/000/080) */
-val clrWhiteDeep = Color(0xFFCCCCCC)
-/* Белый Тёмный (000/000/070) */
-val clrWhiteDark = Color(0xFFB3B3B3)
+/** Красный **/
 
-/** Серый */
-/* Серый Светлый (000/000/060) */
-val clrGrayLight = Color(0xFF999999)
-/* Серый Средний (000/000/050) */
-val clrGrayMiddle = Color(0xFF808080)
-/* Серый Глубокий (000/000/040) */
-val clrGrayDeep = Color(0xFF666666)
-/* Серый Тёмный (000/000/030) */
-val clrGrayDark = Color(0xFF4D4D4D)
+/** todo: Обновить красную палитру из Figma **/
 
-/** Чёрный */
-/* Чёрный Светлый (000/000/020) */
-val clrBlackLight = Color(0xFF333333)
-/* Чёрный Средний (000/000/015) */
-val clrBlackMiddle = Color(0xFF262626)
-/* Чёрный Глубокий (000/000/010) */
-val clrBlackDeep = Color(0xFF1A1A1A)
-/* Чёрный Тёмный (000/000/005) */
-val clrBlackDark = Color(0xFF0D0D0D)
-/* Чёрный (000/000/000) */
-val clrBlack = Color(0xFF000000)
+val Red0 = Color(0xFF590000)
+val Red10 = Color(0xFF730000)
+val Red20 = Color(0xFF8C0000)
+val Red30 = Color(0xFFA60808)
+val Red40 = Color(0xFFBF1D1D)
+val Red50 = Color(0xFFD93636)
+val Red60 = Color(0xFFF25755)
+val Red70 = Color(0xFFFF8480)
+val Red80 = Color(0xFFFFAAA6)
+val Red90 = Color(0xFFFFC3BF)
+val Red95 = Color(0xFFFFDCD9)
+val Red99 = Color(0xFFFFEFED)
+val Red100 = Color(0xFFFFF8F7)
 
-/** Розовый */
-/* Розовый Светлый (005/020/100) */
-val clrPinkLight = Color(0xFFFFD0CC)
-/* Розовый Средний (005/040/100) */
-val clrPinkMiddle = Color(0xFFFFA199)
-/* Розовый Глубокий (005/060/100) */
-val clrPinkDeep = Color(0xFFFF7366)
-/* Розовый Тёмный (000/080/100) */
-val clrPinkDark = Color(0xFFFF3333)
+/** Зелёный **/
+val Green0 = Color(0xFF002603)
+val Green10 = Color(0xFF004005)
+val Green20 = Color(0xFF005907)
+val Green30 = Color(0xFF06730F)
+val Green40 = Color(0xFF158C1F)
+val Green50 = Color(0xFF29A632)
+val Green60 = Color(0xFF43BF49)
+val Green70 = Color(0xFF6CD970)
+val Green80 = Color(0xFF9DF29F)
+val Green90 = Color(0xFFBFFFBF)
+val Green95 = Color(0xFFD9FFD9)
+val Green99 = Color(0xFFEDFFED)
+val Green100 = Color(0xFFF7FFF7)
 
-/** Красный */
-/* Красный Светлый (000/080/080) */
-val clrRedLight = Color(0xFFCC2929)
-/* Красный Средний (000/090/060) */
-val clrRedMiddle = Color(0xFF990F0F)
-/* Красный Глубокий (000/090/040) */
-val clrRedDeep = Color(0xFF660A0A)
-/* Красный Тёмный (000/080/020) */
-val clrRedDark = Color(0xFF330A0A)
+/** Голубой **/
+val LightBlue0 = Color(0xFF002540)
+val LightBlue10 = Color(0xFF003459)
+val LightBlue20 = Color(0xFF004373)
+val LightBlue30 = Color(0xFF07558C)
+val LightBlue40 = Color(0xFF196BA6)
+val LightBlue50 = Color(0xFF3083BF)
+val LightBlue60 = Color(0xFF4CA0D9)
+val LightBlue70 = Color(0xFF6DBFF2)
+val LightBlue80 = Color(0xFF99DAFF)
+val LightBlue90 = Color(0xFFBFE9FF)
+val LightBlue95 = Color(0xFFD9F2FF)
+val LightBlue99 = Color(0xFFEDF9FF)
+val LightBlue100 = Color(0xFFF7FCFF)
 
-/** Коричневый */
-/* Коричневый Светлый (040/070/080) */
-val clrBrownLight = Color(0xFFCC9C3D)
-/* Коричневый Средний (035/080/060) */
-val clrBrownMiddle = Color(0xFF99661F)
-/* Коричневый Глубокий (030/080/040) */
-val clrBrownDeep = Color(0xFF663D14)
-/* Коричневый Тёмный (025/070/020) */
-val clrBrownDark = Color(0xFF331E0F)
+/** Синий **/
+val Blue0 = Color(0xFF001B40)
+val Blue10 = Color(0xFF002559)
+val Blue20 = Color(0xFF003073)
+val Blue30 = Color(0xFF073F8C)
+val Blue40 = Color(0xFF1954A6)
+val Blue50 = Color(0xFF306CBF)
+val Blue60 = Color(0xFF4C89D9)
+val Blue70 = Color(0xFF6DA9F2)
+val Blue80 = Color(0xFF99C9FF)
+val Blue90 = Color(0xFFBFDEFF)
+val Blue95 = Color(0xFFD9ECFF)
+val Blue99 = Color(0xFFEDF6FF)
+val Blue100 = Color(0xFFF7FBFF)
 
-/** Оранжевый */
-/* Оранжевый Светлый (035/070/100) */
-val clrOrangeLight = Color(0xFFFFB54D)
-/* Оранжевый Средний (030/100/100) */
-val clrOrangeMiddle = Color(0xFFFF8000)
-/* Оранжевый Глубокий (025/100/080) */
-val clrOrangeDeep = Color(0xFFCC5500)
-/* Оранжевый Тёмный (020/090/060) */
-val clrOrangeDark = Color(0xFF993D0F)
+/** Фиолетовый **/
+val Purple0 = Color(0xFF300040)
+val Purple10 = Color(0xFF440559)
+val Purple20 = Color(0xFF590B73)
+val Purple30 = Color(0xFF701C8C)
+val Purple40 = Color(0xFF8932A6)
+val Purple50 = Color(0xFFA14CBF)
+val Purple60 = Color(0xFFBA6CD9)
+val Purple70 = Color(0xFFD285F2)
+val Purple80 = Color(0xFFE3A6FF)
+val Purple90 = Color(0xFFEABFFF)
+val Purple95 = Color(0xFFF2D9FF)
+val Purple99 = Color(0xFFF9EDFF)
+val Purple100 = Color(0xFFFCF7FF)
 
-/** Жеёлтый */
-/* Жеёлтый Светлый (045/070/100) */
-val clrYellowLight = Color(0xFFFFD24D)
-/* Жеёлтый Средний (045/100/100) */
-val clrYellowMiddle = Color(0xFFFFBF00)
-/* Жеёлтый Глубокий (040/100/080) */
-val clrYellowDeep = Color(0xFFCC8800)
-/* Жеёлтый Тёмный (035/090/060) */
-val clrYellowDark = Color(0xFF99600F)
-
-/** Маркер */
-/* Маркер Светлый (080/070/100) */
-val clrMarkerLight = Color(0xFFC3FF4D)
-/* Маркер Средний (080/100/100) */
-val clrMarkerMiddle = Color(0xFFAAFF00)
-/* Маркер Глубокий (080/100/080) */
-val clrMarkerDeep = Color(0xFF88CC00)
-/* Маркер Тёмный (080/090/060) */
-val clrMarkerDark = Color(0xFF6B990F)
-
-/** Лайм */
-/* Лайм Светлый (100/070/100) */
-val clrLimeLight = Color(0xFF88FF4D)
-/* Лайм Средний (100/100/100) */
-val clrLimeMiddle = Color(0xFF55FF00)
-/* Лайм Глубокий (100/100/080) */
-val clrLimeDeep = Color(0xFF44CC00)
-/* Лайм Тёмный (100/090/060) */
-val clrLimeDark = Color(0xFF3D990F)
-
-/** Зелёный */
-/* Зелёный Светлый (125/080/080) */
-val clrGreenLight = Color(0xFF29CC36)
-/* Зелёный Средний (125/090/060) */
-val clrGreenMiddle = Color(0xFF0F991B)
-/* Зелёный Глубокий (125/090/040) */
-val clrGreenDeep = Color(0xFF0A6612)
-/* Зелёный Тёмный (125/080/020) */
-val clrGreenDark = Color(0xFF0A330E)
-
-/** Голубой */
-/* Голубой Светлый (210/020/100) */
-val clrSkyLight = Color(0xFFCCE5FF)
-/* Голубой Средний (210/040/100) */
-val clrSkyMiddle = Color(0xFF99CCFF)
-/* Голубой Глубокий (210/060/100) */
-val clrSkyDeep = Color(0xFF66B3FF)
-/* Голубой Тёмный (210/080/100) */
-val clrSkyDark = Color(0xFF3399FF)
-
-/** Синий */
-/* Синий Светлый (215/080/080) */
-val clrBlueLight = Color(0xFF296DCC)
-/* Синий Средний (215/090/060) */
-val clrBlueMiddle = Color(0xFF0F4999)
-/* Синий Глубокий (215/090/040) */
-val clrBlueDeep = Color(0xFF0A3066)
-/* Синий Тёмный (215/080/020) */
-val clrBlueDark = Color(0xFF0A1B33)
-
-/** Фиолетовый */
-/* Фиолетовый Светлый (280/070/080) */
-val clrPurpleLight = Color(0xFF9C3DCC)
-/* Фиолетовый Средний (280/080/060) */
-val clrPurpleMiddle = Color(0xFF701F99)
-/* Фиолетовый Глубокий (280/080/040) */
-val clrPurpleDeep = Color(0xFF4B1466)
-/* Фиолетовый Тёмный (280/070/020) */
-val clrPurpleDark = Color(0xFF270F33)
-
-/** Малиновый */
-/* Малиновый Светлый (330/070/100) */
-val clrCrimsonLight = Color(0xFFFF4DA6)
-/* Малиновый Средний (330/100/100) */
-val clrCrimsonMiddle = Color(0xFFFF0080)
-/* Малиновый Глубокий (330/100/080) */
-val clrCrimsonDeep = Color(0xFFCC0066)
-/* Малиновый Тёмный (330/090/060) */
-val clrCrimsonDark = Color(0xFF990F54)
+/** Серый **/
+val Grey0 = Color(0xFF000000)
+val Grey10 = Color(0xFF121212)
+val Grey20 = Color(0xFF262626)
+val Grey30 = Color(0xFF404040)
+val Grey40 = Color(0xFF595959)
+val Grey50 = Color(0xFF737373)
+val Grey60 = Color(0xFF8C8C8C)
+val Grey70 = Color(0xFFA6A6A6)
+val Grey80 = Color(0xFFBFBFBF)
+val Grey90 = Color(0xFFD9D9D9)
+val Grey95 = Color(0xFFEDEDED)
+val Grey99 = Color(0xFFF7F7F7)
+val Grey100 = Color(0xFFFFFFFF)

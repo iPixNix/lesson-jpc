@@ -3,7 +3,6 @@ package ru.ipixnix.lesson_jpc
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -27,7 +26,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -122,8 +120,7 @@ fun ScreenMain() {
                  * LargeTopAppBar - панель навигации с заголовком под меню
                  * и дополнительной строкой перед заголовком */
                 CenterAlignedTopAppBar(
-                    modifier = Modifier
-                            .background(MaterialTheme.colorScheme.primary),
+                    modifier = Modifier,
                     colors = centerAlignedTopAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primary,
                         titleContentColor = MaterialTheme.colorScheme.onPrimary,
@@ -141,7 +138,7 @@ fun ScreenMain() {
                         IconButton(
                             /* Обработчик нажатия */
                             onClick = {
-                                /*TODO*/
+                                /**TODO**/
                             }
                         ) {
                             /* Иконка кнопки */
@@ -157,7 +154,7 @@ fun ScreenMain() {
                         IconButton(
                             /* Обработчик нажатия */
                             onClick = {
-                                /*TODO*/
+                                /**TODO**/
                             }
                         ) {
                             /* Иконка кнопки */
@@ -170,7 +167,7 @@ fun ScreenMain() {
                         IconButton(
                             /* Обработчик нажатия */
                             onClick = {
-                                /*TODO*/
+                                /**TODO**/
                             }
                         ) {
                             /* Иконка кнопки */
@@ -186,12 +183,12 @@ fun ScreenMain() {
             },
             bottomBar = {
                 NavigationBar(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    contentColor = MaterialTheme.colorScheme.onPrimary
+                    //containerColor = MaterialTheme.colorScheme.primary,
+                    //contentColor = MaterialTheme.colorScheme.onPrimary
                 ) {
                     items.forEachIndexed { index, item ->
                         NavigationBarItem(
-                            colors = NavigationBarItemDefaults.colors(
+                            /**colors = NavigationBarItemDefaults.colors(
                                 selectedIconColor = MaterialTheme.colorScheme.onPrimary,
                                 selectedTextColor = MaterialTheme.colorScheme.onPrimary,
                                 indicatorColor = MaterialTheme.colorScheme.primary,
@@ -199,7 +196,7 @@ fun ScreenMain() {
                                 unselectedTextColor = MaterialTheme.colorScheme.secondary,
                                 disabledIconColor = MaterialTheme.colorScheme.secondary,
                                 disabledTextColor = MaterialTheme.colorScheme.secondary,
-                            ),
+                            ),**/
                             selected = selectedItemIndex == index,
                             onClick = {
                                 selectedItemIndex = index
@@ -242,7 +239,7 @@ fun ScreenMain() {
                 modifier = Modifier
                         .fillMaxWidth() // Растянуть по ширине Родителя
                         .padding(values) // Поля
-                        .background(MaterialTheme.colorScheme.background) // Цвет фона
+                        /**.background(MaterialTheme.colorScheme.background) // Цвет фона**/
             ) {
                 /* Динамический список (может содержать разное количество элементов) */
                 itemsIndexed(
