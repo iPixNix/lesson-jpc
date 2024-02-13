@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -17,7 +18,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -40,7 +40,7 @@ fun ItemRow(item: ItemRowModel) {
         modifier = Modifier
                 .padding(3.dp) // Поля
                 .fillMaxWidth() // Растянуть по ширине Родителя
-                .background(Color.White) // Белый фон
+                .background(MaterialTheme.colorScheme.surfaceTint) // Белый фон
     ) {
         /* Изображение элемента */
         Image(
@@ -64,9 +64,12 @@ fun ItemRow(item: ItemRowModel) {
                     .padding(start = 8.dp, top = 8.dp)
         ) {
             /* Текст элемента */
-            Text(text = item.title)
+            Text(
+                color = MaterialTheme.colorScheme.primary,
+                text = item.title)
             /* Контент элемента */
             Text(
+                color = MaterialTheme.colorScheme.onSurface,
                 /* Модификаторы */
                 modifier = Modifier
                         /* Обработчик нажатия */

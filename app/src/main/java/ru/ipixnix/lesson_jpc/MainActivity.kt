@@ -3,7 +3,6 @@ package ru.ipixnix.lesson_jpc
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -27,27 +26,31 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.TopAppBarDefaults.centerAlignedTopAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.tooling.preview.Preview
+import ru.ipixnix.lesson_jpc.ui.theme.LessonjpcTheme
 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            /* Главный экран */
-            ScreenMain()
+            /* Применение темы к Главному экрану */
+            LessonjpcTheme {/* Главный экран */
+                ScreenMain()
+            }
         }
     }
 }
@@ -86,7 +89,7 @@ fun ScreenMain() {
      Surface(
          modifier = Modifier
                  .fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
+        color = MaterialTheme.colorScheme.primary
     ) {
          /* Привязанная панель */
          //val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
@@ -118,6 +121,13 @@ fun ScreenMain() {
                  * LargeTopAppBar - панель навигации с заголовком под меню
                  * и дополнительной строкой перед заголовком */
                 CenterAlignedTopAppBar(
+                    modifier = Modifier,
+                    colors = centerAlignedTopAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                        navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
+                        actionIconContentColor = MaterialTheme.colorScheme.onPrimary
+                    ),
                     /* Заголовок */
                     title = {
                         /* Текст заголовка */
@@ -129,7 +139,7 @@ fun ScreenMain() {
                         IconButton(
                             /* Обработчик нажатия */
                             onClick = {
-                                /*TODO*/
+                                /**TODO**/
                             }
                         ) {
                             /* Иконка кнопки */
@@ -145,7 +155,7 @@ fun ScreenMain() {
                         IconButton(
                             /* Обработчик нажатия */
                             onClick = {
-                                /*TODO*/
+                                /**TODO**/
                             }
                         ) {
                             /* Иконка кнопки */
@@ -158,7 +168,7 @@ fun ScreenMain() {
                         IconButton(
                             /* Обработчик нажатия */
                             onClick = {
-                                /*TODO*/
+                                /**TODO**/
                             }
                         ) {
                             /* Иконка кнопки */
@@ -173,9 +183,21 @@ fun ScreenMain() {
                 )
             },
             bottomBar = {
-                NavigationBar {
+                NavigationBar(
+                    //containerColor = MaterialTheme.colorScheme.primary,
+                    //contentColor = MaterialTheme.colorScheme.onPrimary
+                ) {
                     items.forEachIndexed { index, item ->
                         NavigationBarItem(
+                            colors = NavigationBarItemDefaults.colors(
+                                selectedIconColor = MaterialTheme.colorScheme.surface,
+                                selectedTextColor = MaterialTheme.colorScheme.primary,
+                                indicatorColor = MaterialTheme.colorScheme.primary,
+                                unselectedIconColor = MaterialTheme.colorScheme.primary,
+                                unselectedTextColor = MaterialTheme.colorScheme.primary,
+                                disabledIconColor = MaterialTheme.colorScheme.primaryContainer,
+                                disabledTextColor = MaterialTheme.colorScheme.primaryContainer,
+                            ),
                             selected = selectedItemIndex == index,
                             onClick = {
                                 selectedItemIndex = index
@@ -189,11 +211,17 @@ fun ScreenMain() {
                                 BadgedBox(
                                     badge = {
                                         if ( item.badgeCount != null ) {
-                                            Badge {
+                                            Badge(
+                                                containerColor = MaterialTheme.colorScheme.tertiary,
+                                                contentColor = MaterialTheme.colorScheme.surface
+                                            ) {
                                                 Text( text = item.badgeCount.toString())
                                             }
                                         } else if ( item.hasNews) {
-                                            Badge()
+                                            Badge(
+                                                containerColor = MaterialTheme.colorScheme.tertiary,
+                                                contentColor = MaterialTheme.colorScheme.surface
+                                            )
                                         }
                                     }
                                 ) {
@@ -218,7 +246,7 @@ fun ScreenMain() {
                 modifier = Modifier
                         .fillMaxWidth() // Растянуть по ширине Родителя
                         .padding(values) // Поля
-                        .background(Color.LightGray) // Цвет фона
+                        /**.background(MaterialTheme.colorScheme.background) // Цвет фона**/
             ) {
                 /* Динамический список (может содержать разное количество элементов) */
                 itemsIndexed(

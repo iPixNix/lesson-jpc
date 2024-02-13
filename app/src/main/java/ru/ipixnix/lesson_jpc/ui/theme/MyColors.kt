@@ -1,0 +1,96 @@
+package ru.ipixnix.lesson_jpc.ui.theme
+
+import androidx.compose.ui.graphics.Color
+
+/** Красный **/
+
+/** todo: Обновить красную палитру из Figma **/
+
+val Red0 = Color(0xFF590000)
+val Red10 = Color(0xFF730000)
+val Red20 = Color(0xFF8C0000)
+val Red30 = Color(0xFFA60808)
+val Red40 = Color(0xFFBF1D1D)
+val Red50 = Color(0xFFD93636)
+val Red60 = Color(0xFFF25755)
+val Red70 = Color(0xFFFF8480)
+val Red80 = Color(0xFFFFAAA6)
+val Red90 = Color(0xFFFFC3BF)
+val Red95 = Color(0xFFFFDCD9)
+val Red99 = Color(0xFFFFEFED)
+val Red100 = Color(0xFFFFF8F7)
+
+/** Зелёный **/
+val Green0 = Color(0xFF002603)
+val Green10 = Color(0xFF004005)
+val Green20 = Color(0xFF005907)
+val Green30 = Color(0xFF06730F)
+val Green40 = Color(0xFF158C1F)
+val Green50 = Color(0xFF29A632)
+val Green60 = Color(0xFF43BF49)
+val Green70 = Color(0xFF6CD970)
+val Green80 = Color(0xFF9DF29F)
+val Green90 = Color(0xFFBFFFBF)
+val Green95 = Color(0xFFD9FFD9)
+val Green99 = Color(0xFFEDFFED)
+val Green100 = Color(0xFFF7FFF7)
+
+/** Голубой **/
+val LightBlue0 = Color(0xFF002540)
+val LightBlue10 = Color(0xFF003459)
+val LightBlue20 = Color(0xFF004373)
+val LightBlue30 = Color(0xFF07558C)
+val LightBlue40 = Color(0xFF196BA6)
+val LightBlue50 = Color(0xFF3083BF)
+val LightBlue60 = Color(0xFF4CA0D9)
+val LightBlue70 = Color(0xFF6DBFF2)
+val LightBlue80 = Color(0xFF99DAFF)
+val LightBlue90 = Color(0xFFBFE9FF)
+val LightBlue95 = Color(0xFFD9F2FF)
+val LightBlue99 = Color(0xFFEDF9FF)
+val LightBlue100 = Color(0xFFF7FCFF)
+
+/** Синий **/
+val Blue0 = Color(0xFF001B40)
+val Blue10 = Color(0xFF002559)
+val Blue20 = Color(0xFF003073)
+val Blue30 = Color(0xFF073F8C)
+val Blue40 = Color(0xFF1954A6)
+val Blue50 = Color(0xFF306CBF)
+val Blue60 = Color(0xFF4C89D9)
+val Blue70 = Color(0xFF6DA9F2)
+val Blue80 = Color(0xFF99C9FF)
+val Blue90 = Color(0xFFBFDEFF)
+val Blue95 = Color(0xFFD9ECFF)
+val Blue99 = Color(0xFFEDF6FF)
+val Blue100 = Color(0xFFF7FBFF)
+
+/** Фиолетовый **/
+val Purple0 = Color(0xFF300040)
+val Purple10 = Color(0xFF440559)
+val Purple20 = Color(0xFF590B73)
+val Purple30 = Color(0xFF701C8C)
+val Purple40 = Color(0xFF8932A6)
+val Purple50 = Color(0xFFA14CBF)
+val Purple60 = Color(0xFFBA6CD9)
+val Purple70 = Color(0xFFD285F2)
+val Purple80 = Color(0xFFE3A6FF)
+val Purple90 = Color(0xFFEABFFF)
+val Purple95 = Color(0xFFF2D9FF)
+val Purple99 = Color(0xFFF9EDFF)
+val Purple100 = Color(0xFFFCF7FF)
+
+/** Серый **/
+val Grey0 = Color(0xFF000000)
+val Grey10 = Color(0xFF121212)
+val Grey20 = Color(0xFF262626)
+val Grey30 = Color(0xFF404040)
+val Grey40 = Color(0xFF595959)
+val Grey50 = Color(0xFF737373)
+val Grey60 = Color(0xFF8C8C8C)
+val Grey70 = Color(0xFFA6A6A6)
+val Grey80 = Color(0xFFBFBFBF)
+val Grey90 = Color(0xFFD9D9D9)
+val Grey95 = Color(0xFFEDEDED)
+val Grey99 = Color(0xFFF7F7F7)
+val Grey100 = Color(0xFFFFFFFF)
