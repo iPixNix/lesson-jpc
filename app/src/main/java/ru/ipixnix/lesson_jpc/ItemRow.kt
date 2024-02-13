@@ -40,7 +40,7 @@ fun ItemRow(item: ItemRowModel) {
         modifier = Modifier
                 .padding(3.dp) // Поля
                 .fillMaxWidth() // Растянуть по ширине Родителя
-                .background(MaterialTheme.colorScheme.surface) // Белый фон
+                .background(MaterialTheme.colorScheme.surfaceTint) // Белый фон
     ) {
         /* Изображение элемента */
         Image(
@@ -64,9 +64,12 @@ fun ItemRow(item: ItemRowModel) {
                     .padding(start = 8.dp, top = 8.dp)
         ) {
             /* Текст элемента */
-            Text(text = item.title)
+            Text(
+                color = MaterialTheme.colorScheme.primary,
+                text = item.title)
             /* Контент элемента */
             Text(
+                color = MaterialTheme.colorScheme.onSurface,
                 /* Модификаторы */
                 modifier = Modifier
                         /* Обработчик нажатия */

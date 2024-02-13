@@ -26,6 +26,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -188,15 +189,15 @@ fun ScreenMain() {
                 ) {
                     items.forEachIndexed { index, item ->
                         NavigationBarItem(
-                            /**colors = NavigationBarItemDefaults.colors(
-                                selectedIconColor = MaterialTheme.colorScheme.onPrimary,
-                                selectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                            colors = NavigationBarItemDefaults.colors(
+                                selectedIconColor = MaterialTheme.colorScheme.surface,
+                                selectedTextColor = MaterialTheme.colorScheme.primary,
                                 indicatorColor = MaterialTheme.colorScheme.primary,
-                                unselectedIconColor = MaterialTheme.colorScheme.secondary,
-                                unselectedTextColor = MaterialTheme.colorScheme.secondary,
-                                disabledIconColor = MaterialTheme.colorScheme.secondary,
-                                disabledTextColor = MaterialTheme.colorScheme.secondary,
-                            ),**/
+                                unselectedIconColor = MaterialTheme.colorScheme.primary,
+                                unselectedTextColor = MaterialTheme.colorScheme.primary,
+                                disabledIconColor = MaterialTheme.colorScheme.primaryContainer,
+                                disabledTextColor = MaterialTheme.colorScheme.primaryContainer,
+                            ),
                             selected = selectedItemIndex == index,
                             onClick = {
                                 selectedItemIndex = index
@@ -210,11 +211,17 @@ fun ScreenMain() {
                                 BadgedBox(
                                     badge = {
                                         if ( item.badgeCount != null ) {
-                                            Badge {
+                                            Badge(
+                                                containerColor = MaterialTheme.colorScheme.tertiary,
+                                                contentColor = MaterialTheme.colorScheme.surface
+                                            ) {
                                                 Text( text = item.badgeCount.toString())
                                             }
                                         } else if ( item.hasNews) {
-                                            Badge()
+                                            Badge(
+                                                containerColor = MaterialTheme.colorScheme.tertiary,
+                                                contentColor = MaterialTheme.colorScheme.surface
+                                            )
                                         }
                                     }
                                 ) {
