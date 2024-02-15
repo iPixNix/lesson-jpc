@@ -16,8 +16,8 @@ val lBackground = Grey100 // Фоновый цвет
 val lOnBackground = Grey0 // На фоновом цвете
 val lError = Red40 // Цвет ошибки
 val lOnError = Red99 // На цвете ошибки
-val lOutline = Grey40 // Контурный цвет
-val lOutlineVariant = Grey80 // Вариант контурного цвета
+val lOutline = Grey50 // Контурный цвет
+val lOutlineVariant = Grey90 // Вариант контурного цвета
 val lScrim = Grey0 // Цвет холста
 
 /* Контейнеры */
@@ -56,8 +56,8 @@ val dBackground = Grey0 // Фоновый цвет
 val dOnBackground = Grey100 // На фоновом цвете
 val dError = Green20 // Цвет ошибки
 val dOnError = Red95 // На цвете ошибки
-val dOutline = Grey0 // Контурный цвет
-val dOutlineVariant = Grey10 // Вариант контурного цвета
+val dOutline = Grey60 // Контурный цвет
+val dOutlineVariant = Grey20 // Вариант контурного цвета
 val dScrim = Grey100 // Цвет холста
 
 /* Контейнеры */

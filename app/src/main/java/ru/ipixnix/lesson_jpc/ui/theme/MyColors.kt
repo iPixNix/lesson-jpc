@@ -4,8 +4,6 @@ import androidx.compose.ui.graphics.Color
 
 /** Красный **/
 
-/** todo: Обновить красную палитру из Figma **/
-
 val Red0 = Color(0xFF590000)
 val Red10 = Color(0xFF730000)
 val Red20 = Color(0xFF8C0000)

@@ -60,6 +60,12 @@ class MainActivity : ComponentActivity() {
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun ScreenMain() {
+
+    /* Объект для вызова короутины
+     * (Снекбар блокирует основной поток, поэтому его надо вызывать в короутине ) */
+    /*todo val coroutineScope = rememberCoroutineScope()
+    val scaffoldState = rememberBottomSheetScaffoldState()*/
+
     /* Список элементов нижней панели навигации */
     val items = listOf(
         BottomNavigationItem(
@@ -86,27 +92,27 @@ fun ScreenMain() {
         mutableIntStateOf(0)
     }
     /* Верхняя панель навигации */
-     Surface(
-         modifier = Modifier
+    Surface(
+        modifier = Modifier
                  .fillMaxSize(),
         color = MaterialTheme.colorScheme.primary
     ) {
-         /* Привязанная панель */
-         //val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+        /* Привязанная панель */
+        //val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
 
-         //val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
-         /* Прятать панель навигации при прокрутке вниз
-         *  и показывать при прокрутке вверх */
-         //val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+        //val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
+        /* Прятать панель навигации при прокрутке вниз
+        *  и показывать при прокрутке вверх */
+        //val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
 
-         /* Сворачивать панель навигации при прокрутке вниз
-         *  и разворачивать при прокрутке вверх */
-         //val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
+        /* Сворачивать панель навигации при прокрутке вниз
+        *  и разворачивать при прокрутке вверх */
+        //val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
 
-         /* Поведение панели навигации */
+        /* Поведение панели навигации */
         val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
 
-         /* Область панели навигации */
+        /* Область панели навигации */
         Scaffold(
             /* Модификаторы */
             modifier = Modifier
@@ -193,10 +199,10 @@ fun ScreenMain() {
                                 selectedIconColor = MaterialTheme.colorScheme.surface,
                                 selectedTextColor = MaterialTheme.colorScheme.primary,
                                 indicatorColor = MaterialTheme.colorScheme.primary,
-                                unselectedIconColor = MaterialTheme.colorScheme.primary,
-                                unselectedTextColor = MaterialTheme.colorScheme.primary,
-                                disabledIconColor = MaterialTheme.colorScheme.primaryContainer,
-                                disabledTextColor = MaterialTheme.colorScheme.primaryContainer,
+                                unselectedIconColor = MaterialTheme.colorScheme.outlineVariant,
+                                unselectedTextColor = MaterialTheme.colorScheme.outline,
+                                disabledIconColor = MaterialTheme.colorScheme.outlineVariant,
+                                disabledTextColor = MaterialTheme.colorScheme.outlineVariant,
                             ),
                             selected = selectedItemIndex == index,
                             onClick = {
