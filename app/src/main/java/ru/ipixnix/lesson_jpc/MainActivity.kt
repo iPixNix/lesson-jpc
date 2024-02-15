@@ -129,10 +129,10 @@ fun ScreenMain() {
                 CenterAlignedTopAppBar(
                     modifier = Modifier,
                     colors = centerAlignedTopAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primary,
-                        titleContentColor = MaterialTheme.colorScheme.onPrimary,
-                        navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-                        actionIconContentColor = MaterialTheme.colorScheme.onPrimary
+                        containerColor = MaterialTheme.colorScheme.surface,
+                        titleContentColor = MaterialTheme.colorScheme.onSurface,
+                        navigationIconContentColor = MaterialTheme.colorScheme.onSurface,
+                        actionIconContentColor = MaterialTheme.colorScheme.onSurface
                     ),
                     /* Заголовок */
                     title = {
@@ -190,8 +190,8 @@ fun ScreenMain() {
             },
             bottomBar = {
                 NavigationBar(
-                    //containerColor = MaterialTheme.colorScheme.primary,
-                    //contentColor = MaterialTheme.colorScheme.onPrimary
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.onSurface
                 ) {
                     items.forEachIndexed { index, item ->
                         NavigationBarItem(
@@ -199,7 +199,7 @@ fun ScreenMain() {
                                 selectedIconColor = MaterialTheme.colorScheme.surface,
                                 selectedTextColor = MaterialTheme.colorScheme.primary,
                                 indicatorColor = MaterialTheme.colorScheme.primary,
-                                unselectedIconColor = MaterialTheme.colorScheme.outlineVariant,
+                                unselectedIconColor = MaterialTheme.colorScheme.outline,
                                 unselectedTextColor = MaterialTheme.colorScheme.outline,
                                 disabledIconColor = MaterialTheme.colorScheme.outlineVariant,
                                 disabledTextColor = MaterialTheme.colorScheme.outlineVariant,

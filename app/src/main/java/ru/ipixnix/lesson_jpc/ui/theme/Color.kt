@@ -21,7 +21,7 @@ val lOutlineVariant = Grey90 // Вариант контурного цвета
 val lScrim = Grey0 // Цвет холста
 
 /* Контейнеры */
-val lPrimaryContainer = Blue90 // Первичный контейнер
+val lPrimaryContainer = Blue99 // Первичный контейнер
 val lOnPrimaryContainer = Blue0 // На первичном контейнере
 val lSecondaryContainer = Purple95 // Вторичный контейнер
 val lOnSecondaryContainer = Purple0 // На вторичном контейнере
