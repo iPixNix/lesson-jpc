@@ -20,26 +20,34 @@ import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalDrawerSheet
+import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.TopAppBarDefaults.centerAlignedTopAppBarColors
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.tooling.preview.Preview
+import kotlinx.coroutines.launch
 import ru.ipixnix.lesson_jpc.ui.theme.LessonjpcTheme
 
 class MainActivity : ComponentActivity() {
@@ -54,6 +62,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 
 /** Главный экран */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -71,21 +80,18 @@ fun ScreenMain() {
         BottomNavigationItem(
             title = "Главная",
             selectedIcon = Icons.Filled.Home,
-            unselectedIcon = Icons.Outlined.Home,
-            hasNews = false
+            unselectedIcon = Icons.Outlined.Home
         ),
         BottomNavigationItem(
             title = "Чат",
             selectedIcon = Icons.Filled.Email,
             unselectedIcon = Icons.Outlined.MailOutline,
-            hasNews = false,
             badgeCount = 45
         ),
         BottomNavigationItem(
             title = "Настройки",
             selectedIcon = Icons.Filled.Settings,
             unselectedIcon = Icons.Outlined.Settings,
-            hasNews = true
         ),
     )
     var selectedItemIndex by rememberSaveable {
@@ -93,10 +99,82 @@ fun ScreenMain() {
     }
     /* Верхняя панель навигации */
     Surface(
-        modifier = Modifier
-                 .fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.primary
     ) {
+        val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
+        val scope = rememberCoroutineScope()
+        @Suppress("NAME_SHADOWING")
+        var selectedItemIndex by rememberSaveable {
+            mutableIntStateOf(0)
+        }
+        ModalNavigationDrawer(
+            drawerContent = {
+                ModalDrawerSheet {
+                    items.forEachIndexed { index, item ->
+                        NavigationDrawerItem(
+                            label = {
+                                Text(text = item.title)
+                            },
+                            selected = index == selectedItemIndex,
+                            onClick = {
+                                selectedItemIndex = index
+                                scope.launch {
+                                    drawerState.close()
+                                }
+                            },
+                            icon = {
+                                Icon(
+                                    imageVector = if (index == selectedItemIndex) {
+                                        item.selectedIcon
+                                    } else item.unselectedIcon,
+                                    contentDescription = item.title
+                                )
+                            },
+                            badge = {
+                                item.badgeCount?.let{
+                                    Text(text = item.badgeCount.toString())
+                                }
+                            }
+                        )
+                    }
+                }
+            },
+            drawerState = drawerState
+        ) {
+            Scaffold(
+
+                topBar = {
+                    TopAppBar(
+                        /* Заголовок */
+                        title = {
+                            /* Текст заголовка */
+                            Text(text =  "Инструменты Material 3")
+                        },
+                        /* Главная кнопка */
+                        navigationIcon = {
+                            /* Кнопка с иконкой */
+                            IconButton(
+                                /* Обработчик нажатия */
+                                onClick = {
+                                    scope.launch {
+                                        drawerState.open()
+                                    }
+                                }
+                            ) {
+                                /* Иконка кнопки */
+                                Icon(
+                                    imageVector = Icons.Default.Menu,
+                                    contentDescription = "Меню"
+                                )
+                            }
+                        },
+                    )
+                }
+            ) {
+            }
+        }
+
         /* Привязанная панель */
         //val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
 
@@ -119,6 +197,7 @@ fun ScreenMain() {
                     .fillMaxSize() // Растянуть по ширине Родителя
                     /* Привязать поведение к вложенной прокрутке */
                     .nestedScroll(scrollBehavior.nestedScrollConnection),
+
             topBar = {
                 /* Верхняя панель навигации
                  * TopAppBar - стандартная панель навигации
