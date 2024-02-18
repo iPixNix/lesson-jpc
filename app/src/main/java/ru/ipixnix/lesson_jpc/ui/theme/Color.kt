@@ -5,7 +5,7 @@ package ru.ipixnix.lesson_jpc.ui.theme
 /* Главные цвета */
 val lPrimary = Blue50 // Первичный цвет
 val lOnPrimary = Blue99 // На первичном цвете
-val lSecondary = Purple50 // Вторичный цвет
+val lSecondary = LightBlue50 // Вторичный цвет
 val lOnSecondary = Purple99 // На вторичном цвете
 val lTertiary = Green50 // Третичный цвет
 val lOnTertiary = Green99 // На третичном цвете
@@ -13,31 +13,31 @@ val lInversePrimary = Blue80 // Инвертированный первичны�
 
 /* Дополнительные цвета */
 val lBackground = Grey100 // Фоновый цвет
-val lOnBackground = Grey0 // На фоновом цвете
+val lOnBackground = Blue0 // На фоновом цвете
 val lError = Red40 // Цвет ошибки
 val lOnError = Red99 // На цвете ошибки
-val lOutline = Grey50 // Контурный цвет
-val lOutlineVariant = Grey90 // Вариант контурного цвета
-val lScrim = Grey0 // Цвет холста
+val lOutline = Blue50 // Контурный цвет
+val lOutlineVariant = LightBlue60 // Вариант контурного цвета
+val lScrim = Blue0 // Цвет холста
 
 /* Контейнеры */
-val lPrimaryContainer = Blue99 // Первичный контейнер
-val lOnPrimaryContainer = Blue0 // На первичном контейнере
-val lSecondaryContainer = Purple95 // Вторичный контейнер
-val lOnSecondaryContainer = Purple0 // На вторичном контейнере
-val lTertiaryContainer = Green95 // Третичный контейнер
-val lOnTertiaryContainer = Green0 // На третичном контейнере
-val lErrorContainer = Red95 // Контейнер ошибки
-val lOnErrorContainer = Red0 // На контейнере ошибки
+val lPrimaryContainer = Blue60 // Первичный контейнер
+val lOnPrimaryContainer = Blue100 // На первичном контейнере
+val lSecondaryContainer = Blue50 // Вторичный контейнер
+val lOnSecondaryContainer = LightBlue100 // На вторичном контейнере
+val lTertiaryContainer = Green60 // Третичный контейнер
+val lOnTertiaryContainer = Green100 // На третичном контейнере
+val lErrorContainer = Red60 // Контейнер ошибки
+val lOnErrorContainer = Red100 // На контейнере ошибки
 
 /* Поверхности */
 val lSurface = Grey100 // Поверхность
-val lOnSurface = Grey10 // На Поверхности
-val lSurfaceVariant = Grey70 // Вариант поверхности
-val lOnSurfaceVariant = Grey100 // На варианте поверхности
-val lInverseSurface = Grey40 // Инвертированная поверхность
-val lInverseOnSurface = Grey99 // На инвертированной поверхности
-val lSurfaceTint = Grey99 // Компоненты с тоном высоты (чем выше - тем ярче)
+val lOnSurface = Blue50 // На Поверхности
+val lSurfaceVariant = LightBlue100 // Вариант поверхности
+val lOnSurfaceVariant = Blue60 // На варианте поверхности
+val lInverseSurface = Blue50 // Инвертированная поверхность
+val lInverseOnSurface = Blue99 // На инвертированной поверхности
+val lSurfaceTint = Blue99 // Компоненты с тоном высоты (чем выше - тем ярче)
 
 
 /** Тёмная тема **/

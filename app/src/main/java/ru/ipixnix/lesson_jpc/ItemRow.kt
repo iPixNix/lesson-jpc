@@ -1,7 +1,6 @@
 package ru.ipixnix.lesson_jpc
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -9,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -40,7 +38,6 @@ fun ItemRow(item: ItemRowModel) {
         modifier = Modifier
                 .padding(3.dp) // Поля
                 .fillMaxWidth() // Растянуть по ширине Родителя
-                .background(MaterialTheme.colorScheme.surfaceTint) // Белый фон
     ) {
         /* Изображение элемента */
         Image(
@@ -65,11 +62,10 @@ fun ItemRow(item: ItemRowModel) {
         ) {
             /* Текст элемента */
             Text(
-                color = MaterialTheme.colorScheme.primary,
+                //color = MaterialTheme.colorScheme.primary,
                 text = item.title)
             /* Контент элемента */
             Text(
-                color = MaterialTheme.colorScheme.onSurface,
                 /* Модификаторы */
                 modifier = Modifier
                         /* Обработчик нажатия */
