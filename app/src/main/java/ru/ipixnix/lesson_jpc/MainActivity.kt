@@ -45,8 +45,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -58,32 +58,22 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val navController = rememberNavController()
-
             /* Применение темы к Главному экрану */
             LessonjpcTheme {/* Главный экран */
+
+                val navController = rememberNavController()
                 NavHost(
                     navController = navController,
-                    startDestination = "screen_1"
+                    startDestination = Screen.Home.rout
                 ) {
-                    composable("screen_1") {
-                        Screen1 {
-                            navController.navigate("screen_2")
-                        }
+                    composable("Home") {
+                        ScreenMain(navController = navController)
                     }
-                    composable("screen_2") {
-                        Screen2 {
-                            navController.navigate("screen_3")
-                        }
+                    composable(Screen.Screen1.rout) {
+                        Screen1(navController = navController)
                     }
-                    composable("screen_3") {
-                        Screen3 {
-                            navController.navigate("screen_1") {
-                                popUpTo("screen_1") {
-                                    inclusive = true
-                                }
-                            }
-                        }
+                    composable(Screen.Screen3.rout) {
+                        Screen3(navController = navController)
                     }
                 }
             }
@@ -94,39 +84,38 @@ class MainActivity : ComponentActivity() {
 
 /** Главный экран */
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview(showSystemUi = true, showBackground = true)
+//@Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun ScreenMain() {
+fun ScreenMain(navController: NavController) {
 
     /* Список элементов нижней панели навигации */
     val items = listOf(
         BottomNavigationItem(
+            rout = "Home",
             title = "Главная",
             selectedIcon = Icons.Filled.Home,
             unselectedIcon = Icons.Outlined.Home
         ),
         BottomNavigationItem(
+            rout = "screen_1",
             title = "Чат",
             selectedIcon = Icons.Filled.Email,
             unselectedIcon = Icons.Outlined.MailOutline,
             badgeCount = 45
         ),
         BottomNavigationItem(
+            rout = "screen_3",
             title = "Настройки",
             selectedIcon = Icons.Filled.Settings,
             unselectedIcon = Icons.Outlined.Settings,
         ),
     )
-    var selectedItemIndex by rememberSaveable {
-        mutableIntStateOf(0)
-    }
     /* Верхняя панель навигации */
     Surface(
         modifier = Modifier.fillMaxSize(),
     ) {
         val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
         val scope = rememberCoroutineScope()
-        @Suppress("NAME_SHADOWING")
         var selectedItemIndex by rememberSaveable {
             mutableIntStateOf(0)
         }
@@ -148,6 +137,12 @@ fun ScreenMain() {
                             selected = index == selectedItemIndex,
                             onClick = {
                                 selectedItemIndex = index
+                                navController.popBackStack()
+                                navController.navigate(item.rout) {
+                                    popUpTo(item.rout) {
+                                        inclusive
+                                    }
+                                }
                                 scope.launch {
                                     drawerState.close()
                                 }
@@ -275,12 +270,7 @@ fun ScreenMain() {
                                     BadgedBox(
                                         badge = {
                                             if ( item.badgeCount != null ) {
-                                                Badge(
-                                                    /*containerColor = MaterialTheme.colorScheme
-                                                            .tertiary,
-                                                    contentColor = MaterialTheme.colorScheme
-                                                            .surface*/
-                                                ) {
+                                                Badge {
                                                     Text( text = item.badgeCount.toString())
                                                 }
                                             } else if ( item.hasNews) {

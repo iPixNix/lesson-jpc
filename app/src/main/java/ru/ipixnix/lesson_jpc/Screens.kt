@@ -12,9 +12,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+
+sealed class Screen(val rout: String) {
+    data object Home: Screen("Home")
+    data object Screen1: Screen("screen_1")
+    data object Screen3: Screen("screen_3")
+}
 
 @Composable
-fun Screen1(onClick: () -> Unit) {
+fun Screen1(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -27,16 +34,21 @@ fun Screen1(onClick: () -> Unit) {
         Spacer(modifier = Modifier.height(30.dp))
         Button(
             onClick = {
-                onClick()
+                navController.popBackStack()
+                navController.navigate(Screen.Screen3.rout) {
+                    popUpTo(Screen.Screen3.rout) {
+                        inclusive
+                    }
+                }
             }
         ) {
-            Text(text = "Экран 2")
+            Text(text = "Экран 3")
         }
     }
 }
 
 @Composable
-fun Screen2(onClick: () -> Unit) {
+fun Screen2(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -49,7 +61,12 @@ fun Screen2(onClick: () -> Unit) {
         Spacer(modifier = Modifier.height(30.dp))
         Button(
             onClick = {
-                onClick()
+                navController.popBackStack()
+                navController.navigate(Screen.Screen3.rout) {
+                    popUpTo(Screen.Screen3.rout) {
+                        inclusive
+                    }
+                }
             }
         ) {
             Text(text = "Экран 3")
@@ -58,7 +75,7 @@ fun Screen2(onClick: () -> Unit) {
 }
 
 @Composable
-fun Screen3(onClick: () -> Unit) {
+fun Screen3(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -71,10 +88,15 @@ fun Screen3(onClick: () -> Unit) {
         Spacer(modifier = Modifier.height(30.dp))
         Button(
             onClick = {
-                onClick()
+                navController.popBackStack()
+                navController.navigate(Screen.Home.rout) {
+                    popUpTo(Screen.Home.rout) {
+                        inclusive
+                    }
+                }
             }
         ) {
-            Text(text = "Экран 1")
+            Text(text = "Главная")
         }
     }
 }
