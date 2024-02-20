@@ -2,11 +2,12 @@ package ru.ipixnix.lesson_jpc
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
+/** Структура пунктов меню **/
 data class MenuItem(
-    val rout: String,
-    val title: String,
-    val selectedIcon: ImageVector,
-    val unselectedIcon: ImageVector,
-    val hasNews: Boolean = false,
-    val badgeCount: Int? = null
+    val route: String, // Путь к вызываемому экрану
+    val title: String, // Заголовок пунка меню
+    val selectedIcon: ImageVector, // Иконка выбранного пункта меню
+    val unselectedIcon: ImageVector, // Иконка невыбранного пункта меню
+    val hasNews: Boolean = false, // Есть ли новости (значок)
+    val badgeCount: Int? = null // Количество новостей (значок со счётчиком)
 )

@@ -91,20 +91,20 @@ fun ScreenMain(navController: NavController) {
     /* Список элементов нижней панели навигации */
     val items = listOf(
         MenuItem(
-            rout = "Home",
+            route = "Home",
             title = "Главная",
             selectedIcon = Icons.Filled.Home,
             unselectedIcon = Icons.Outlined.Home
         ),
         MenuItem(
-            rout = "screen_1",
+            route = "screen_1",
             title = "Чат",
             selectedIcon = Icons.Filled.Email,
             unselectedIcon = Icons.Outlined.MailOutline,
             badgeCount = 45
         ),
         MenuItem(
-            rout = "screen_3",
+            route = "screen_3",
             title = "Настройки",
             selectedIcon = Icons.Filled.Settings,
             unselectedIcon = Icons.Outlined.Settings,
@@ -138,8 +138,8 @@ fun ScreenMain(navController: NavController) {
                             onClick = {
                                 selectedItemIndex = index
                                 navController.popBackStack()
-                                navController.navigate(item.rout) {
-                                    popUpTo(item.rout) {
+                                navController.navigate(item.route) {
+                                    popUpTo(item.route) {
                                         inclusive
                                     }
                                 }
