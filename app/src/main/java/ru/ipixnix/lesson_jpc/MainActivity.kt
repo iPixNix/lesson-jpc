@@ -90,20 +90,20 @@ fun ScreenMain(navController: NavController) {
 
     /* Список элементов нижней панели навигации */
     val items = listOf(
-        BottomNavigationItem(
+        MenuItem(
             rout = "Home",
             title = "Главная",
             selectedIcon = Icons.Filled.Home,
             unselectedIcon = Icons.Outlined.Home
         ),
-        BottomNavigationItem(
+        MenuItem(
             rout = "screen_1",
             title = "Чат",
             selectedIcon = Icons.Filled.Email,
             unselectedIcon = Icons.Outlined.MailOutline,
             badgeCount = 45
         ),
-        BottomNavigationItem(
+        MenuItem(
             rout = "screen_3",
             title = "Настройки",
             selectedIcon = Icons.Filled.Settings,
