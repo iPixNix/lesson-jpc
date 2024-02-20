@@ -54,25 +54,31 @@ import kotlinx.coroutines.launch
 import ru.ipixnix.lesson_jpc.ui.theme.LessonjpcTheme
 
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            /* Применение темы к Главному экрану */
-            LessonjpcTheme {/* Главный экран */
-
+            /* Настройка темы приложения */
+            LessonjpcTheme {
+                /* Контроллер навигации */
                 val navController = rememberNavController()
+                /* Навигационный узел */
                 NavHost(
-                    navController = navController,
-                    startDestination = Screen.Home.rout
+                    navController = navController, // Контроллер навигации
+                    startDestination = Screen.Home.rout // Стартовый экран
                 ) {
+                    /* Экран Home (Главный экран) */
                     composable("Home") {
+                        /* Структура экрана Home */
                         ScreenMain(navController = navController)
                     }
+                    /* Экран Screen1 (Экран 1) */
                     composable(Screen.Screen1.rout) {
+                        /* Структура экрана Screen1 */
                         Screen1(navController = navController)
                     }
+                    /* Экран Screen1 (Экран 3) */
                     composable(Screen.Screen3.rout) {
+                        /* Структура экрана Screen3 */
                         Screen3(navController = navController)
                     }
                 }
