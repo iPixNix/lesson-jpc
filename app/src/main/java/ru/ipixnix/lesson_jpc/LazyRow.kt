@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 
 /** Шаблон для элемента Горизонтального списка */
 @Composable
-fun ItemRow(item: ItemRowModel) {
+fun LazyRow(item: LazyItem) {
     /* Состояние контента (Свёрнут/Развёрнут) */
     var isExpanded by remember { mutableStateOf(false) }
 
