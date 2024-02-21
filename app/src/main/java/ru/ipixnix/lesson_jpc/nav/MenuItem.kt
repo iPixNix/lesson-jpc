@@ -1,4 +1,4 @@
-package ru.ipixnix.lesson_jpc
+package ru.ipixnix.lesson_jpc.nav
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

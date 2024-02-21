@@ -1,4 +1,4 @@
-package ru.ipixnix.lesson_jpc
+package ru.ipixnix.lesson_jpc.nav
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,10 +14,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
-sealed class Screen(val rout: String) {
-    data object Home: Screen("Home")
-    data object Screen1: Screen("screen_1")
-    data object Screen3: Screen("screen_3")
+sealed class NavScreen(val rout: String) {
+    data object ScreenMain: NavScreen("Главный экран")
+    data object Screen1: NavScreen("Экран 1")
+    data object Screen2: NavScreen("Экран 2")
+    data object Screen3: NavScreen("Экран 3")
 }
 
 @Composable
@@ -35,8 +36,8 @@ fun Screen1(navController: NavController) {
         Button(
             onClick = {
                 navController.popBackStack()
-                navController.navigate(Screen.Screen3.rout) {
-                    popUpTo(Screen.Screen3.rout) {
+                navController.navigate(NavScreen.Screen3.rout) {
+                    popUpTo(NavScreen.Screen3.rout) {
                         inclusive
                     }
                 }
@@ -62,8 +63,8 @@ fun Screen2(navController: NavController) {
         Button(
             onClick = {
                 navController.popBackStack()
-                navController.navigate(Screen.Screen3.rout) {
-                    popUpTo(Screen.Screen3.rout) {
+                navController.navigate(NavScreen.Screen3.rout) {
+                    popUpTo(NavScreen.Screen3.rout) {
                         inclusive
                     }
                 }
@@ -89,14 +90,14 @@ fun Screen3(navController: NavController) {
         Button(
             onClick = {
                 navController.popBackStack()
-                navController.navigate(Screen.Home.rout) {
-                    popUpTo(Screen.Home.rout) {
+                navController.navigate(NavScreen.ScreenMain.rout) {
+                    popUpTo(NavScreen.ScreenMain.rout) {
                         inclusive
                     }
                 }
             }
         ) {
-            Text(text = "Главная")
+            Text(text = "Главный")
         }
     }
 }

@@ -51,6 +51,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import kotlinx.coroutines.launch
+import ru.ipixnix.lesson_jpc.nav.MenuItem
+import ru.ipixnix.lesson_jpc.nav.NavScreen
+import ru.ipixnix.lesson_jpc.nav.Screen1
+import ru.ipixnix.lesson_jpc.nav.Screen3
 import ru.ipixnix.lesson_jpc.ui.theme.LessonjpcTheme
 
 class MainActivity : ComponentActivity() {
@@ -64,20 +68,20 @@ class MainActivity : ComponentActivity() {
                 /* Навигационный узел */
                 NavHost(
                     navController = navController, // Контроллер навигации
-                    startDestination = Screen.Home.rout // Стартовый экран
+                    startDestination = NavScreen.ScreenMain.rout // Стартовый экран
                 ) {
                     /* Экран Home (Главный экран) */
-                    composable("Home") {
+                    composable(NavScreen.ScreenMain.rout) {
                         /* Структура экрана Home */
                         ScreenMain(navController = navController)
                     }
                     /* Экран Screen1 (Экран 1) */
-                    composable(Screen.Screen1.rout) {
+                    composable(NavScreen.Screen1.rout) {
                         /* Структура экрана Screen1 */
                         Screen1(navController = navController)
                     }
                     /* Экран Screen1 (Экран 3) */
-                    composable(Screen.Screen3.rout) {
+                    composable(NavScreen.Screen3.rout) {
                         /* Структура экрана Screen3 */
                         Screen3(navController = navController)
                     }
